@@ -4,7 +4,7 @@
 	<div class="container-fluid">
     	<div class="row">
     		<div class="content">
-				<?php include('views/content-home.php') ?>
+				<?php include('views/content-about.php') ?>
 			</div>
 		</div>
 	</div>
