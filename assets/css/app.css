@@ -1,0 +1,337 @@
+@charset "UTF-8";
+/* PNM 2015 - Eric's und Lukas's Sass styling
+-------------------------------------------------- */
+body:before {
+  background-color: #FCF8E3;
+  border-bottom: 1px solid #FBEED5;
+  border-left: 1px solid #FBEED5;
+  color: #C09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  @media (min-width: 20em) {
+    body:before {
+      content: "mobile ≥ 320px (20em)"; } }
+  @media (min-width: 30em) {
+    body:before {
+      content: "mobileLandscape ≥ 480px (30em)"; } }
+  @media (min-width: 37.5em) {
+    body:before {
+      content: "tablet ≥ 600px (37.5em)"; } }
+  @media (min-width: 56.25em) {
+    body:before {
+      content: "desktop ≥ 900px (56.25em)"; } }
+  @media (min-width: 81.25em) {
+    body:before {
+      content: "wide ≥ 1300px (81.25em)"; } }
+
+h1, h2, p {
+  margin: 10px 0; }
+
+section.impact .flex-banner h1, section.thrive .flex-banner h1 {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+h1 {
+  font-size: 33.33333px;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter; }
+  @media (min-width: 37.5em) {
+    h1 {
+      font-size: 5.55556vw; } }
+  @media (min-width: 56.25em) {
+    h1 {
+      font-size: 50px; } }
+
+h2 {
+  font-size: 26.66667px;
+  font-family: 'Lato', sans-serif;
+  font-weight: lighter; }
+  @media (min-width: 37.5em) {
+    h2 {
+      font-size: 4.44444vw; } }
+  @media (min-width: 56.25em) {
+    h2 {
+      font-size: 40px; } }
+
+p {
+  font-size: 12px;
+  font-family: 'Open Sans';
+  line-height: 1.5; }
+  @media (min-width: 37.5em) {
+    p {
+      font-size: 2vw; } }
+  @media (min-width: 56.25em) {
+    p {
+      font-size: 18px; } }
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center; }
+  section .flex-caption {
+    width: 100vw; }
+    @media (min-width: 37.5em) {
+      section .flex-caption {
+        max-width: 800px;
+        width: 50vw; } }
+  section .flex-image {
+    width: 100vw; }
+    @media (min-width: 37.5em) {
+      section .flex-image {
+        max-width: 800px;
+        width: 50vw; } }
+  section .flex-banner {
+    width: 100vw; }
+    @media (min-width: 37.5em) {
+      section .flex-banner {
+        max-width: 1600px;
+        width: 100vw; } }
+  section .flex-caption div {
+    max-width: 490px; }
+  section.welcome {
+    flex-direction: column; }
+    section.welcome .flex-caption div {
+      margin: 50px 20px; }
+      @media (min-width: 37.5em) {
+        section.welcome .flex-caption div {
+          float: right;
+          margin-right: 40px;
+          margin-left: 50px; } }
+    @media (min-width: 37.5em) {
+      section.welcome {
+        flex-direction: row; } }
+    section.welcome .flex-image {
+      height: 533.33333px;
+      background: url("../img/pnm-landing-page-v02-00.jpg") no-repeat right top;
+      background-size: cover;
+      overflow: hidden; }
+      @media (min-width: 37.5em) {
+        section.welcome .flex-image {
+          height: 88.88889vw; } }
+      @media (min-width: 56.25em) {
+        section.welcome .flex-image {
+          height: 800px; } }
+    section.welcome .flex-caption div {
+      text-align: left;
+      margin-top: 200px; }
+      section.welcome .flex-caption div h1 {
+        color: #1b7876; }
+      @media (min-width: 37.5em) {
+        section.welcome .flex-caption div h1 {
+          margin-right: -30px;
+          margin-left: -30px; }
+        section.welcome .flex-caption div p {
+          margin-right: 45px;
+          margin-left: -30px; } }
+  section.impact .flex-banner {
+    color: #ffffff;
+    height: 258px;
+    background-color: #32bfc1; }
+    section.impact .flex-banner h1 {
+      margin: 0px 20px; }
+  section.learn-skills {
+    flex-direction: column; }
+    section.learn-skills .flex-caption div {
+      margin: 50px 20px; }
+      @media (min-width: 37.5em) {
+        section.learn-skills .flex-caption div {
+          float: left;
+          margin-right: 50px;
+          margin-left: 40px; } }
+    @media (min-width: 37.5em) {
+      section.learn-skills {
+        flex-direction: row-reverse; } }
+    section.learn-skills .flex-image {
+      height: 333.33333px;
+      background: url("../img/pnm-landing-page-v02-01.jpg") no-repeat right top;
+      background-size: cover;
+      overflow: hidden; }
+      @media (min-width: 37.5em) {
+        section.learn-skills .flex-image {
+          height: 55.55556vw; } }
+      @media (min-width: 56.25em) {
+        section.learn-skills .flex-image {
+          height: 500px; } }
+    section.learn-skills .flex-caption h2 {
+      color: #b2c049; }
+  section.offer-skills {
+    flex-direction: column; }
+    section.offer-skills .flex-caption div {
+      margin: 50px 20px; }
+      @media (min-width: 37.5em) {
+        section.offer-skills .flex-caption div {
+          float: right;
+          margin-right: 40px;
+          margin-left: 50px; } }
+    @media (min-width: 37.5em) {
+      section.offer-skills {
+        flex-direction: row; } }
+    section.offer-skills .flex-image {
+      height: 333.33333px;
+      background: url("../img/pnm-landing-page-v02-02.jpg") no-repeat center bottom;
+      background-size: cover;
+      overflow: hidden; }
+      @media (min-width: 37.5em) {
+        section.offer-skills .flex-image {
+          height: 55.55556vw; } }
+      @media (min-width: 56.25em) {
+        section.offer-skills .flex-image {
+          height: 500px; } }
+    section.offer-skills .flex-caption h2 {
+      color: #32bfc1; }
+  section.visit-places {
+    flex-direction: column; }
+    section.visit-places .flex-caption div {
+      margin: 50px 20px; }
+      @media (min-width: 37.5em) {
+        section.visit-places .flex-caption div {
+          float: left;
+          margin-right: 50px;
+          margin-left: 40px; } }
+    @media (min-width: 37.5em) {
+      section.visit-places {
+        flex-direction: row-reverse; } }
+    section.visit-places .flex-image {
+      height: 333.33333px;
+      background: url("../img/pnm-landing-page-v02-03.jpg") no-repeat right bottom;
+      background-size: cover;
+      overflow: hidden; }
+      @media (min-width: 37.5em) {
+        section.visit-places .flex-image {
+          height: 55.55556vw; } }
+      @media (min-width: 56.25em) {
+        section.visit-places .flex-image {
+          height: 500px; } }
+    section.visit-places .flex-caption h2 {
+      color: #f26746; }
+  section.thrive .flex-banner {
+    color: #ffffff;
+    height: 258px;
+    background-color: #b2c049; }
+    section.thrive .flex-banner h1 {
+      margin: 0px 20px; }
+
+/* NAV BAR */
+.navbar {
+  font-family: 'Open Sans';
+  font-size: 14px; }
+
+.navbar {
+  position: absolute;
+  width: 100vw;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; }
+  .navbar-toggle .icon-bar {
+    background-color: #000000; }
+  .navbar-brand {
+    margin-left: 20px;
+    padding: 0;
+    height: 56px; }
+  .navbar-brand img {
+    max-width: 260px; }
+  .navbar-nav {
+    margin-right: 20px;
+    float: right;
+    color: #ffffff; }
+    .navbar-nav button {
+      font-size: 11px;
+      background-color: #b2c049;
+      cursor: pointer;
+      border: none;
+      padding: 9px 16px;
+      line-height: 1; }
+      .navbar-nav button:hover {
+        color: black;
+        background-color: #c6d45f;
+        border-color: #c6d45f; }
+  .navbar-item {
+    color: #ffffff;
+    margin: 17px;
+    cursor: pointer; }
+    .navbar-item:hover {
+      color: black;
+      text-decoration: none; }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */ }
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px; }
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 60px;
+  background-color: #f5f5f5; }
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* -----------------------------------------------
+  App styles
+  ------------------------------------------------ */
+.center, .comment {
+  padding: 15px 0;
+  border-bottom: 1px solid #e8e8e8; }
+
+.error,
+a.error,
+a.error:hover,
+a.error:focus,
+button.error,
+button.error:hover,
+button.error:focus {
+  color: #D9534F; }
+
+.form-actions {
+  background: #fff;
+  border: 0; }
+
+#spacer {
+  display: inline-block; }
+
+.muted {
+  color: #aaa;
+  font-size: 12px; }
+
+.alert {
+  margin-top: 10px; }
+
+.navbar-brand {
+  font-size: 14px;
+  color: #000 !important; }
+
+.navbar-nav > li > a.travis {
+  padding-top: 13px; }
+
+.navbar-right > li > a {
+  padding-left: 5px;
+  padding-right: 5px; }
+
+/*# sourceMappingURL=app.css.map */
