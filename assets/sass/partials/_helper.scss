@@ -1,0 +1,84 @@
+
+// ----------------------------------------------------------------------------
+// Helper functions
+// ----------------------------------------------------------------------------
+
+%default-margin { margin: 10px 0; }
+
+%vertical-align {
+  position: relative;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+  -ms-transform: translateY(-45%);
+  transform: translateY(-45%);
+}
+
+@mixin radial-bg($color1, $color2) {
+  .radial-bg {
+    background-image: -ms-radial-gradient(center, ellipse farthest-corner, $color1 0%, $color2 70%);
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, $color1 0%, $color2 70%);
+    background-image: -o-radial-gradient(center, ellipse farthest-corner, $color1 0%, $color2 70%);
+    background-image: -webkit-gradient(radial, center center, 0, center center, 125, color-stop(0, $color1), color-stop(70, $color2));
+    background-image: -webkit-radial-gradient(center, ellipse farthest-corner, $color1 0%, $color2 70%);
+    background-image: radial-gradient(ellipse farthest-corner at center, $color1 0%, $color2 70%);
+  }
+}
+
+@mixin col-image($height,$align-lcr,$align-tcb,$url) {
+  .col-image {
+    @include mq-scale-between-devices((height: $height),tablet,desktop);
+    background: url($url) no-repeat $align-lcr $align-tcb; //top center bottom;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+
+@mixin col-margin($right,$left) {
+  margin: 0 20px;
+  @include mq($from: tablet) {
+    margin-right: $right; margin-left: $left;
+  }
+}
+
+@mixin col-caption($mobile_height, $height, $side) {
+  .col-caption{
+    height: $mobile_height;
+    @include mq($from: tabletLandscape) {
+      height: $height;
+    }
+  }
+  @if ($side == right) {
+    .col-caption div {
+      @extend %vertical-align;
+      @include col-margin(50px,30px);
+      @include mq($from: desktop) {
+        @include col-margin(70px,30px);
+      }
+    }
+  }
+  @if ($side == left) {
+    .col-caption div {
+      @extend %vertical-align;
+      @include col-margin(30px,50px);
+      @include mq($from: desktop) {
+        @include col-margin(30px,70px);
+      }
+    }
+  }
+}
+
+@mixin col-row($height, $color, $bgcolor, $padding) {
+  .col-row {
+    color: $color;
+    background-color: $bgcolor;
+    height: $height;
+    text-align: center;
+  }
+  .col-row div {
+    @extend %vertical-align;
+    padding: 20px;
+    @include mq($from: desktop) {
+      padding: $padding;
+    }
+  }
+}

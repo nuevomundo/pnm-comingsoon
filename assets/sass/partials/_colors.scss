@@ -1,18 +1,24 @@
 $colors: (
   'teal': (
-//    tint: #32bfc1,
     base: #32bfc1,
     shade: #1b7876
   ),
   'olive': (
     tint: #c6d45f,
-    base: #b2c049
+    base: #b2c049,
+    dark: #818730,
   ),
   'red': (
     base: #f26746
   ),
   'white': (
     base: #ffffff
+  ),
+  'black': (
+    base: #1a1a1a
+  ),
+  'gray': (
+    base: #e3e3e3
   )
 );
 

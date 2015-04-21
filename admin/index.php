@@ -68,7 +68,7 @@
               </div>
               <div class="large-12 columns">
                 <label for="analytics">Analytics ID</label>
-                <input type="text" name="analytics" placeholder="UA-XXXXXX-X" value ="<?php echo $pnm['analytics']; ?>" required/>
+                <input type="text" name="analytics" placeholder="UA-XXXXXX-X" value ="<?php echo $pnm['analytics']; ?>" />
               </div>
             </div>
 
@@ -121,6 +121,10 @@
               <div class="large-12 columns">
                 <label for="cta5_content">Call to action 5 content</label>
                 <textarea type="text" name="cta5_content" placeholder="Find the perfect match for your interests..." required><?php echo $pnm['cta5_content']; ?></textarea>
+              </div>
+              <div class="large-12 columns">
+                <label for="cta5_btn">Call to action 5 button</label>
+                <input type="text" name="cta5_btn" placeholder="Contact us" value="<?php echo $pnm['cta5_btn']; ?>" required>
               </div>
 
               <div class="large-12 columns">

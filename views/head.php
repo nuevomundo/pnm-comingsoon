@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 define('JSON_FILE', 'admin/comingsoon.json');
 $pnm = json_decode( file_get_contents(JSON_FILE), true ); 
 ?>
@@ -11,9 +12,10 @@ $pnm = json_decode( file_get_contents(JSON_FILE), true );
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="<?php echo $pnm['keywords']; ?>">
     <meta name="description" content="<?php echo $pnm['description']; ?>">
+    <link rel="shortcut icon" href="favicon.ico">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Lato:300,400' rel='stylesheet' type='text/css'>
-    <link href="assets/vendor/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet" >
+    <link href="assets/css/plugins.min.css" rel="stylesheet">
+    <link href="assets/css/app.min.css" rel="stylesheet" >
   </head>
 
   <!--[if lt IE 9]>

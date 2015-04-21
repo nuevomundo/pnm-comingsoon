@@ -1,14 +1,11 @@
 <?php include('views/head.php'); ?>
-<body>
+<body class="home">
 	<?php include('views/header.php'); ?>
 	<div class="container-fluid">
-    	<div class="row">
-    		<div class="content">
-				<?php include('views/content-home.php') ?>
-			</div>
+		<div class="row">
+			<?php include('views/content-home.php') ?>
 		</div>
 	</div>
 	<?php include('views/footer.php'); ?>
-	<script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>

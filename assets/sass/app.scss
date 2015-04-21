@@ -1,166 +1,489 @@
-/* PNM 2015 - Eric's und Lukas's Sass styling
+/* PNM 2015 - SASS Styling by @goodthngs
 -------------------------------------------------- */
 
+/* -----------------------------------------------
+  Typography
+  ------------------------------------------------ */
+
+$head-font: "Lato", "Helvetica Neue", Helvetica, sans-serif;
+$copy-font: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+
+$small-ftsize: 14px;
+$copy-ftsize: 14px;
+$navi-ftsize: 14px;
+$btn-ftsize: 12px;
+$h1-ftsize: 48px;
+$h2-ftsize: 38px;
+$subline-ftsize: 18px;
+
+// partials
+
+@import "partials/colors";
 @import "partials/sass-mq";
-@import "partials/main";
-
-/* NAV BAR */
-.navbar {
-  font-family: 'Open Sans';
-  font-size: 14px;
-}
-
-.navbar {
-  position: absolute;
-  width: 100vw;
-  margin-top: 20px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-
-  &-toggle {
-    .icon-bar {
-      background-color: #000000;
-    }
-  }
-
-  &-brand {
-    margin-left: 20px;
-    padding: 0;
-    height: 56px;
-  }
-
-  &-brand img {
-    max-width: 260px;
-  }
-//  &-menu {
-//    width: 50vw;
-//    max-width: 580px;
-//  }
-
-  &-nav {
-    margin-right: 20px;
-    float: right;
-    color: #ffffff;
-    button {
-      font-size: 11px;
-      background-color: color('olive','base');
-      cursor: pointer;
-      border: none;
-      padding: 9px 16px;
-      line-height: 1;
-      &:hover {
-        color: black ;
-        background-color: color('olive', 'tint');
-        border-color: color('olive', 'tint');
-      }
-    }
-  }
-
-  &-item {
-    color: #ffffff;
-    margin: 17px;
-    cursor: pointer;
-    &:hover {
-      color: black;
-      text-decoration: none;
-    }
-  }
-
-}
+@import "partials/helper";
+@import "partials/home";
+@import "partials/about";
 
 
+/* -----------------------------------------------
+  Base
+  ------------------------------------------------ */
 
-
-/* Sticky footer styles
--------------------------------------------------- */
-
-html,
 body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
+  font-family: $copy-font;
+  font-size: $copy-ftsize;
+  @include mq($from: mobileLandscape) {
+    font-size: $copy-ftsize + 4px;
+  }
+  line-height: 1.8;
 }
 
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto;
-  /* Negative indent footer by its height */
-  margin: 0 auto -60px;
-  /* Pad bottom by footer height */
-  padding: 0 0 60px;
-}
-
-/* Set the fixed height of the footer here */
-#footer {
-  height: 60px;
-  background-color: #f5f5f5;
+a {
+  color: color('teal', 'base');
+  &:hover,
+  &:focus {
+    color: color('teal','shade');
+    text-decoration: underline;
+  }
 }
 
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
+/* -----------------------------------------------
+  Headlines
+  ------------------------------------------------ */
 
+h1 {
+  @extend %default-margin;
+  @include mq-scale-between-devices((font-size: $h1-ftsize),tablet,wide);
+  font-family: $head-font;
+  font-weight: 400;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
 
-//.container .text-muted {
-//  margin: 20px 0;
-//}
-
-#footer > .container {
-  padding-left: 15px;
-  padding-right: 15px;
+h2 {
+  @extend %default-margin;
+  @include mq-scale-between-devices((font-size: $h2-ftsize),tabletLandscape,wide);
+  font-family: $head-font;
+  font-weight: 400;
 }
 
 /* -----------------------------------------------
-  App styles
+  Buttons
   ------------------------------------------------ */
 
-.center, .comment {
-  padding: 15px 0;
-  border-bottom: 1px solid #e8e8e8;
+  .btn-olive {
+    font-size: $btn-ftsize;
+    background-color: white;
+    color: color('teal', 'shade');
+    border-color: color('teal', 'base');
+    padding: 14px 24px;
+    text-transform: uppercase;
+    font-weight: 600;
+    i {margin-left: 5px;}
+    &:hover {
+      color: white;
+      background: color('teal', 'base');
+    }
+  }
+
+  .btn-red {
+    color: white;
+    font-size: $btn-ftsize + 4px;
+    border-color: white;
+    background-color: color('red');
+    padding: 10px;
+    @include mq($from: mobileLandscape) {
+        padding: 10px 20px;
+    }
+    i {
+      margin-right: 5px;
+    }
+    &:hover {
+      color: color('red', 'base');
+      background: white;
+    }
+  }
+
+/* -----------------------------------------------
+  Forms
+  ------------------------------------------------ */
+
+  form.form-inline, form.form-horizontal, form.form {
+    input, select {
+        height: 54px;
+    }
+    input, textarea, select {
+        font-size: $copy-ftsize;
+        padding: 16px;
+        border-color: transparent;
+        border-radius: 0;
+        margin-right:10px;
+        font-weight: 300;
+        color: color('black');
+    }
+    select {
+      width: 100%;
+      padding: 15px 20px;
+      border:none;
+      outline:none;
+      display: block;
+      @include mq($from: tabletLandscape) {
+        display: inline-block;
+      }
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+      cursor:pointer;
+      height: 54px;
+    }
+    label.selectlbl {
+      width: 100%;
+      display: block;
+      @include mq($from: tabletLandscape) {
+        display: inline-block;
+      }
+      position:relative;
+      margin: 0;
+      color: #999;
+    }
+    label.selectlbl:after {
+        content: "\f0d7";
+        font-family: "FontAwesome";
+        position:absolute;
+        right: 30px;
+        top: 10px;
+        font-size:20px;
+        color: color('red');
+        padding-left: 10px;
+    }
+    button {
+        @extend .btn-red;
+        &.submit-btn {
+          padding: 0 30px;
+          border: 2px solid;
+          margin-top: 10px;
+          min-width:120px;
+          font-weight: 600;
+          height: 54px;
+          text-transform:uppercase;
+          @include mq($from: mobileLandscape) {
+            margin-top: 0;
+          }
+        }
+    }
+    .form-line {
+      width: 100%;
+      display: inline-block;
+      .form-group {
+        @include mq($from: desktop) {
+          width:24.2%;
+          float:left;
+          margin: 0 0.5% !important;
+          &:first-child {
+            margin-left: 0 !important;
+            margin-right:0.5% !important;
+          }
+          &:last-child {
+            margin-right: 0 !important;
+            margin-left:0.5% !important;
+          }
+        }
+      }
+    }
+    .form-group {
+      margin: 10px 0 !important;
+      vertical-align: top;
+    }
+    label.error {
+      font-size: $btn-ftsize;
+      display: block;
+      text-align: left;
+      padding-top: 5px;
+      color: white;
+      font-weight: 100;
+    }
+    .submit-success {
+      font-size: $small-ftsize;
+      margin-right: 20px;
+      display: inline-block;
+      font-weight: 100;
+      color: white;
+    }
+  }
+  .home .submit-success {
+    font-size: $subline-ftsize !important;
+    margin: 20px 0 0 0;
+  }
+
+/* -----------------------------------------------
+  Navigation
+  ------------------------------------------------ */
+
+.navbar .container {
+  // snap to grid below mobile landscape and on wide displays
+  @include mq($from: mobileLandscape, $until: wide) {
+    width: 100%;
+    padding: 0 7%;
+  }
 }
 
-.error,
-a.error,
-a.error:hover,
-a.error:focus,
-button.error,
-button.error:hover,
-button.error:focus {
-  color: #D9534F;
+// home page navi font media query
+.home .navbar a, .home .navbar a:hover, .home .navbar a:focus {
+  @include mq($from: desktop) {
+    color: white;
+  }
 }
 
-.form-actions {
-  background: #fff;
-  border: 0;
+.navbar {
+  font-family: $head-font;
+  font-size: $navi-ftsize;
+  font-weight: 400;
+  position: relative;
+  z-index: 1000;
+  @include mq($from: tabletLandscape) {
+    position: absolute;
+  }
+  width: 100vw;
+  margin: 30px 0 0 0;
+
+  &-toggle {
+    margin-top: 5px;
+    .icon-bar {
+      background-color: color('black');
+    }
+  }
+  &-brand {
+    padding: 0 0 0 20px;
+    @include mq($from: mobileLandscape) {
+      padding: 0;
+    }
+  }
+  &-brand img {
+    max-width: 220px;
+    @include mq($from: tabletLandscape) {
+      max-width: 260px;
+    }
+  }
+  &-right {
+    margin-top: 10px;
+  }
+  &-collapse {
+    padding: 0;
+    .navbar-nav {
+      margin: 5px 40px;
+      @include mq($from: mobileLandscape) {
+        margin: 5px 10px;
+      }
+    }
+  }
+  &-nav {
+     // if button is nested in navigation
+    button {
+      color: white;
+      font-size: $btn-ftsize;
+      font-weight: 300;
+      background-color: color('olive','base');
+      border: none;
+      text-transform: uppercase;
+      padding: 5px 15px;
+      &:hover, &:focus {
+        color: white;
+        background-color: color('olive', 'dark');
+      }
+    }
+  }
+  li {
+    &:last-child a {
+      padding: 0;
+      margin-top: 10px;
+      @include mq($from: tabletLandscape) {
+        margin: 0 0 0 20px;
+      }
+    }
+    &.active a, &>a:focus, &>a:hover {
+      background: transparent;
+      color: color('teal', 'base');
+      border: none;
+      @include mq($from: tabletLandscape) {
+        color: inherit;
+        border-bottom: 2px solid color('teal', 'base');
+      }
+    }
+    a {
+      padding: 0 2px;
+      margin: 5px 20px 0 0;
+      color: color('black');
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+  li.list-btn {
+    a:hover, a:focus {
+      border: none;
+    }
+  }
 }
 
-#spacer {
-  display: inline-block;
+
+/* -----------------------------------------------
+  Grid
+  ------------------------------------------------ */
+
+.container-fluid {min-height: 500px;}
+.container-fluid > .row {
+  margin: 0;
 }
 
-.muted {
-  color: #aaa;
-  font-size: 12px;
+.col-caption p {
+  @extend %default-margin;
+  @include mq-scale-between-devices((font-size: $subline-ftsize),tabletLandscape, desktop);
+  font-family: $copy-font;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
 }
 
-.alert {
-  margin-top: 10px;
+.col-row > div {
+  padding: 0 20px;
 }
 
-.navbar-brand {
-  font-size: 14px;
-  color: #000 !important;
+.grid {
+  text-align: center;
+  .col-caption {
+    padding: 0 20px;
+    @include mq($from: tablet) {
+      padding: 0;
+    }
+  }
 }
 
-.navbar-nav > li > a.travis{
-  padding-top: 13px;
+/* -----------------------------------------------
+  Features & Team
+  ------------------------------------------------ */
+
+.feature, .team {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 30px;
+  @include mq($from: desktop) {
+     margin-bottom: 50px;
+     padding: 0 50px;
+     min-height: 500px;
+  }
+  h2 {
+    font-size: $h2-ftsize;
+    color: color('teal', 'shade');
+    line-height: 1.2;
+  }
+  p {
+    @extend %default-margin;
+    @include mq-scale-between-devices((font-size: $subline-ftsize),tabletLandscape,desktop);
+    font-family: $copy-font;
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &-icon {
+    margin: 0 auto 20px auto;
+    width: 170px;
+    height: 170px;
+    background: color('gray');
+    border-radius: 50%;
+    img {
+      padding: 20px;
+      max-width:170px;
+    }
+    img.booking {
+      margin-top:15px;
+    }
+    img.directory {
+      margin-top:3px;
+    }
+  }
+  &-subtitle {
+    text-transform: uppercase !important;
+    font-size: $copy-ftsize - 4px;
+    color: mix(color('black'), color('gray'), 50);
+    margin: -10px 0 10px 0;
+  }
+  &-text {
+    margin-bottom: 40px;
+    padding: 0;
+    @include mq($from: mobileLandscape) {
+      padding: 0 20px;
+
+    }
+  }
+  &-social {
+    margin-top: -10px;
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline;
+      margin: 0 2px;
+      img {
+        max-width: 30px;
+      }
+    }
+  }
+}
+.team-icon img {
+  padding: 0;
 }
 
-.navbar-right > li > a {
-  padding-left: 5px;
-  padding-right: 5px;
+/* -----------------------------------------------
+  Content
+  ------------------------------------------------ */
+
+ul.logo-list {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 20px;
+    display: inline-block;
+    img {
+      max-width: 200px;
+      max-height: 50px;
+      @include mq($from: tablet) {
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+/* -----------------------------------------------
+  Footer
+  ------------------------------------------------ */
+
+footer.content-info {
+  font-size: $small-ftsize;
+  padding: 20px 0;
+  color: white;
+  background: color('black');
+  .social {
+    float: left;
+    margin-right: 10px;
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      display: inline;
+      margin-right: 3px;
+      img {
+        max-width: 30px;
+      }
+    }
+  }
+  span.copyright {
+    margin: 6px 0 0 5px;
+    display: inline-block;
+  }
 }

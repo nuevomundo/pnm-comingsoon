@@ -1,0 +1,112 @@
+.home .grid {
+  &.section-welcome {
+    @include col-caption(340px, 500px, left);
+    @include col-image(650px,right,top,"../img/pnm-landing-page-v02-00.jpg");
+    .col-caption div {
+      text-align: left;
+      h1 {
+        margin-top:0;
+        @include mq($from: tabletLandscape) {
+          margin-top: 80px;
+        }
+        @include mq($from: desktop) {
+          margin-top: 100px;
+        }
+        color: color('teal', 'shade');
+      }
+    }
+  }
+  &.section-impact {
+    @include col-row(260px, white, color('teal', 'base'), 0 150px);
+    h1 {@extend %vertical-align; margin: 0px 20px;}
+  }
+  &.section-learn {
+    @include col-caption(250px, 350px, right);
+    @include col-image(400px,right,top,"../img/pnm-landing-page-v02-01.jpg");
+    .col-caption h2 {color: color('olive', 'base')}
+    h1 {@extend %vertical-align; margin: 0px 20px;}
+  }
+  &.section-offer {
+    @include col-caption(250px, 350px, left);
+    @include col-image(400px,center,bottom,"../img/pnm-landing-page-v02-02.jpg");
+    .col-caption h2 {color: color('teal', 'base')}
+  }
+  &.section-places {
+    @include col-caption(250px, 350px, right);
+    @include col-image(400px,right,bottom,"../img/pnm-landing-page-v02-03.jpg");
+    .col-caption h2 {color: color('red', 'base')}
+  }
+  &.section-thrive {
+    @include col-row(260px, white, color('olive', 'base'), 0 150px);
+    h1 {@extend %vertical-align; margin: 0px 20px;}
+  }
+  &.section-features {
+    padding: 60px 0 40px 0;
+  }
+  &.section-subscribe {
+    background-color: color('red');
+    padding: 50px 30px;
+    h1 {color: white;}
+    p {margin-bottom: 25px;}
+    input.form-control {
+      min-width: 280px;
+    }
+    .share-project {
+      margin-top: 50px;
+      button {
+        margin: 0 5px;
+        @include mq($from: tablet) {
+            margin: 0 10px;
+        }
+      }
+    }
+  }
+  &.section-blog {
+    .col-row {padding: 50px 0;}
+    h1 {
+      color: color('teal', 'shade');
+      padding: 20px 0;
+      @include mq($from: desktop) {
+          padding: 20px 200px 50px 200px;
+      }
+    }
+    article.post {
+      display: inline-block;
+      width: 90vw;
+      text-align:left;
+      margin: 0 auto 50px 0;
+      .post-thumbnail-container {
+        padding-top: 5px;
+        width: 100%;
+        margin: 0 0 20px 0;
+        max-height: 250px;
+        overflow: hidden;
+        img.post-thumbnail {
+          width: 100%;
+          height: auto;
+        }
+      }
+      h2 {
+        color: color('teal', 'base');
+        font-size: $h2-ftsize;
+        line-height: 1.1;
+        margin-top: 0;
+        a:hover {
+          text-decoration: none;
+        }
+      }
+      .post-meta {
+        margin-bottom: 10px;
+        color: mix(color('black'), color('gray'), 50);
+      }
+      .post-excerpt {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &.section-press {
+    padding: 50px 60px;
+    background-color: color('gray');
+    .col-row h1 {color: color('teal', 'shade')}
+  }
+}
