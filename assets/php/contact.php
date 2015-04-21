@@ -30,7 +30,7 @@
 
         // send email
         $mail->SetFrom($email);
-        $mail->addAddress('hi@goodthngs.me');
+        $mail->addAddress($sendto);
         $mail->Subject = 'PNM Form submitted by ' . $firstname . ' ' . $lastname . ' (' . $email . ')';
         $mail->Body = '<p><strong>Sent from</strong> ' . $firstname . ' ' . $lastname . '<br />';
         $mail->Body .= '<strong>Email:</strong> ' . $email . '</p>';

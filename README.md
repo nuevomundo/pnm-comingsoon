@@ -8,6 +8,7 @@ Installation
 
 For email / bitrix submission define assets/php/auth.php
 
+* $sendto (Email contact form will be submitted to)
 * $mail_host
 * $mail_port
 * $mail_ssl
@@ -18,5 +19,5 @@ For email / bitrix submission define assets/php/auth.php
 
 For mailchimp submission define assets/php/chimpkey.php
 
-* $chimpkey
-* $listid
+* $chimpkey (Mailchimp API Key)
+* $listid (List ID)
