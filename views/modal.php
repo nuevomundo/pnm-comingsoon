@@ -3,8 +3,8 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content" style="height: 550px;">
 
-<!-- 			<div class="typeform-widget" data-url="https://pnm.typeform.com/to/UHaXXV" data-text="Touch to fill in our cool form!" style="width:100%;height:550px;"></div>
-			<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
- -->
+			<iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://pnm.typeform.com/to/UHaXXV"></iframe>
+			<script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/share.typeform.com/embed.js"></script>
+
           </div>
       </div>
