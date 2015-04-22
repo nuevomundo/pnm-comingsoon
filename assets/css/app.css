@@ -629,8 +629,13 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
     text-transform: uppercase; }
   .navbar li a:hover {
     text-decoration: none; }
-  .navbar li.list-btn a:hover, .navbar li.list-btn a:focus {
-    border: none; }
+  .navbar li.list-btn {
+    margin-top: 10px; }
+    @media (min-width: 48em) {
+      .navbar li.list-btn {
+        margin-top: 0; } }
+    .navbar li.list-btn a:hover, .navbar li.list-btn a:focus {
+      border: none; }
 
 /* -----------------------------------------------
   Grid

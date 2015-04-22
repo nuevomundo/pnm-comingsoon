@@ -126,8 +126,8 @@
 
 
               <div class="share-project">
-                <a href="https://www.facebook.com/dialog/feed?display=popup&caption=Support%20Project%20Nuevo%20Mundo&link=http%3A%2F%2Fgoodthingseverywhere.com%2F" title="Share on Facebook" target="_blank"><button class="btn btn-red" type="button"><i class="fa fa-facebook"></i> Facebook</button></a>
-                <a href="https://twitter.com/share?text=Support%20Project%20Nuevo%20Mundo%20-%20&url=http%3A%2F%2Fprojectnuevomundo.com" title="Share on Twitter" target="_blank"><button class="btn btn-red" type="button"><i class="fa fa-twitter"></i> Twitter</button></a>
+                <a href="#" onclick="javascript:window.open('https://www.facebook.com/sharer/sharer.php?u=http://projectnuevomundo.com', '_blank', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=400,width=600');return false;" title="Share on Facebook"><button class="btn btn-red" type="button"><i class="fa fa-facebook"></i> Facebook</button></a>
+                <a href="#" onclick="javascript:window.open('https://twitter.com/share?text=Support%20Project%20Nuevo%20Mundo%20-%20&url=http%3A%2F%2Fprojectnuevomundo.com', '_blank', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=250,width=600');return false;" title="Share on Twitter" target="_blank"><button class="btn btn-red" type="button"><i class="fa fa-twitter"></i> Twitter</button></a>
               </div>
 
             </div>

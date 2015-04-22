@@ -322,6 +322,10 @@ h2 {
     }
   }
   li.list-btn {
+    margin-top: 10px;
+    @include mq($from: tabletLandscape) {
+      margin-top: 0;
+    }
     a:hover, a:focus {
       border: none;
     }

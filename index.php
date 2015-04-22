@@ -1,3 +1,7 @@
+<?php
+$page_title = "Welcome";
+$page_url = "/";
+?>
 <?php include('views/head.php'); ?>
 <body class="home">
 	<?php include('views/header.php'); ?>
