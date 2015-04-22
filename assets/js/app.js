@@ -2,6 +2,9 @@ $(document).ready(function () {
 	// navi classes
 	$('body.about nav.navbar li.about').addClass('active');
 
+	// svg fallbacks
+	svgeezy.init(false, 'png');
+
 	// forms
 	$('#newsletter-submit input, #contact-form input').on('focusout', function(){
 		$('label.error').hide();
