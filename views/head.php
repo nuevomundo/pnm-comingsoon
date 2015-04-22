@@ -1,7 +1,8 @@
 <?php
 error_reporting(0);
 define('JSON_FILE', 'admin/comingsoon.json');
-$pnm = json_decode( file_get_contents(JSON_FILE), true ); 
+$pnm = json_decode( file_get_contents(JSON_FILE), true );
+$blog_path = '../pnm-blog/wp-blog-header.php';
 ?>
 <!doctype html>
 <html>
@@ -15,9 +16,9 @@ $pnm = json_decode( file_get_contents(JSON_FILE), true );
     <link rel="shortcut icon" href="favicon.ico">
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<?php echo $pnm['title']; ?>" />
+    <meta property="og:title" content="<?php echo $pnm['title']; ?> - <?php echo $page_title; ?>" />
     <meta property="og:url" content="http://projectnuevomundo.com<?php echo $page_url; ?>" />
-    <meta property="og:site_name" content="Transformational Times" />
+    <meta property="og:site_name" content="<?php echo $pnm['title']; ?>" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Lato:300,400' rel='stylesheet' type='text/css'>
     <link href="assets/css/plugins.min.css" rel="stylesheet">
     <link href="assets/css/app.min.css" rel="stylesheet" >

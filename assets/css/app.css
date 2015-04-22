@@ -1,40 +1,8 @@
-@charset "UTF-8";
 /* PNM 2015 - SASS Styling by @goodthngs
 -------------------------------------------------- */
 /* -----------------------------------------------
   Typography
   ------------------------------------------------ */
-body:before {
-  background-color: #FCF8E3;
-  border-bottom: 1px solid #FBEED5;
-  border-left: 1px solid #FBEED5;
-  color: #C09853;
-  font: small-caption;
-  padding: 3px 6px;
-  pointer-events: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 100; }
-  @media (min-width: 20em) {
-    body:before {
-      content: "mobile ≥ 320px (20em)"; } }
-  @media (min-width: 30em) {
-    body:before {
-      content: "mobileLandscape ≥ 480px (30em)"; } }
-  @media (min-width: 37.5em) {
-    body:before {
-      content: "tablet ≥ 600px (37.5em)"; } }
-  @media (min-width: 48em) {
-    body:before {
-      content: "tabletLandscape ≥ 768px (48em)"; } }
-  @media (min-width: 62em) {
-    body:before {
-      content: "desktop ≥ 992px (62em)"; } }
-  @media (min-width: 81.25em) {
-    body:before {
-      content: "wide ≥ 1300px (81.25em)"; } }
-
 h1, h2, .col-caption p, .feature p, .team p {
   margin: 10px 0; }
 
@@ -220,6 +188,7 @@ h1, h2, .col-caption p, .feature p, .team p {
   .home .grid.section-subscribe input.form-control {
     min-width: 280px; }
   .home .grid.section-subscribe .share-project {
+    padding: 0;
     margin-top: 50px; }
     .home .grid.section-subscribe .share-project button {
       margin: 0 5px; }
@@ -713,7 +682,7 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
       margin-top: 3px; }
   .feature-subtitle, .team-subtitle {
     text-transform: uppercase !important;
-    font-size: 10px;
+    font-size: 12px;
     color: #7e7e7e;
     margin: -10px 0 10px 0; }
   .feature-text, .team-text {

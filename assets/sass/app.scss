@@ -411,7 +411,7 @@ h2 {
   }
   &-subtitle {
     text-transform: uppercase !important;
-    font-size: $copy-ftsize - 4px;
+    font-size: $copy-ftsize - 2px;
     color: mix(color('black'), color('gray'), 50);
     margin: -10px 0 10px 0;
   }

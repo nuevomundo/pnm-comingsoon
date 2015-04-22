@@ -73,13 +73,12 @@
                     <div class="feature-icon">
                       <img class="directory" src="assets/img/center-directory.svg" alt="">
                     </div>
-                    <h2 class="center">Add your center to the directory</h2>
+                    <h2 class="center"><?php echo $pnm['feature_title_1'] ?></h2>
                     <div class="feature-text">
-                      <p>Enable more people to find your center, stay, volunteer, and take a workshop. We’ll share your impact center with travelers from around the globe.</p>
-                      <p>Find out more below about our criteria for listing.</p>
+                        <?php echo $pnm['feature_text_1']; ?>
                     </div>
                     <div class="feature-btn">
-                      <a href="about.php#impactcenter" title="Contact Us"><button class="btn btn-olive">Learn more <i class="fa fa-angle-double-right"></i></button></a>
+                      <a href="about.php#impactcenter" title="Contact Us"><button class="btn btn-olive"><?php echo $pnm['feature_btn_1']; ?> <i class="fa fa-angle-double-right"></i></button></a>
                     </div>
                 </div>
 
@@ -87,13 +86,12 @@
                     <div class="feature-icon">
                       <img class="booking" src="assets/img/booking-tools.svg" alt="">
                     </div>
-                    <h2 class="center">Coming soon: management &amp; booking tools</h2>
+                    <h2 class="center"><?php echo $pnm['feature_title_2']; ?></h2>
                     <div class="feature-text">
-                      <p>Our team is currently participating in <a href="http://www.startupchile.org/blog/ladies-and-gentleman-these-are-the-100-startups-chosen-to-be-part-of-generation-12/" target="_blank">Startup Chile 2015</a> and focusing on creating organizational and booking tools specifically designed for centers like yours.</p>
-                      <p>Contact us if you would like to offer your input.</p>
+                      <?php echo $pnm['feature_text_2']; ?>
                     </div>
                     <div class="feature-btn">
-                      <a href="about.php#contact" title="Contact Us"><button class="btn btn-olive" type="button">Contact us <i class="fa fa-angle-double-right"></i></button></a>
+                      <a href="about.php#contact" title="Contact Us"><button class="btn btn-olive" type="button"><?php echo $pnm['feature_btn_2']; ?> <i class="fa fa-angle-double-right"></i></button></a>
                     </div>
                 </div>
 
@@ -103,8 +101,8 @@
 
             <div class="cold-md-12 col-row">
 
-              <h1 class="center">Become a part of the movement.</h1>
-              <p>Get involved by signing up for our newsletter or sharing Project Nuevo Mundo on Facebook and Twitter.</p>
+              <h1 class="center"><?php echo $pnm['subscribe_title']; ?></h1>
+              <p><?php echo $pnm['subscribe_intro']; ?></p>
 
               <form class="form-inline" id="newsletter-submit" action="" method="post" accept-charset="utf-8">
                 <div class="form-group">
@@ -138,11 +136,11 @@
 
             <div class="cold-md-12 col-row">
 
-              <h1 class="center">Learn more about transformational travel on our blog.</h1>
+              <h1 class="center"><?php echo $pnm['blog_title']; ?></h1>
 
                 <?php
                   define('WP_USE_THEMES', false);
-                  require('../pnm-blog/wp-blog-header.php');
+                  require($blog_path);
                   query_posts('showposts=2');
                 ?>
 
@@ -181,7 +179,7 @@
 
             <div class="cold-md-12 col-row">
 
-              <h1 class="center">Press &amp; Participation.</h1>
+              <h1 class="center"><?php echo $pnm['press_title']; ?></h1>
               <ul class="logo-list">
                 <li><img src="assets/img/logo-shareable.png" alt="Shareable Logo"></li>
                 <li><img src="assets/img/logo-utne.png" alt="UTNE Logo"></li>
