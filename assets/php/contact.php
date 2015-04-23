@@ -1,6 +1,10 @@
 <?php
     // Application date
     date_default_timezone_set('Etc/UTC');
+
+    // get json for error messages
+    include('../../config.php')
+
     if (isset($_POST["email"]) && $_POST["email"] != "" && isValidEmail($_POST["email"]) ) {
 
         require 'phpmailer/PHPMailerAutoload.php';
@@ -39,9 +43,9 @@
 
         //send confirmation email, check for errors
         if (!$mail->send()) {
-            echo "Mailer Error: " . $mail->ErrorInfo;
+            echo $forms['messages']['error'] . ' ' . $mail->ErrorInfo;
         } else {
-            echo "Thanks! We'll get back to you very soon.";
+            echo $forms['messages']['send_success'];
         }
 
         // submit to bitrix
@@ -82,7 +86,7 @@
         curl_close($curl);
 
     } else {
-      echo "Please enter a valid email address.";
+      echo $forms['messages']['email_required'];
     }
 
     function isValidEmail($email) {
