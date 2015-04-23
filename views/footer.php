@@ -9,7 +9,7 @@
 				<li><a href="http://www.linkedin.com/company/project-nuevo-mundo"><img src="assets/img/icon-linkedin.svg" alt=""></a></li>
 			</ul>
 		</div>
-		<span class="copyright">Copyright &copy;2015 Project Nuevo Mundo</span>
+		<span class="copyright"><?php echo $pnm['config']['footer_comment']; ?></span>
 	</div>
 </footer>
 <?php include('modal.php'); ?>

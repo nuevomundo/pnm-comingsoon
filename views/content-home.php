@@ -3,9 +3,9 @@
 
             <div class="col-md-6 col-caption">
               <div>
-                <h1><?php echo $pnm['cta1']; ?></h1>
-                <p><?php echo $pnm['cta1_content']; ?></p>
-                <a href="about.php#impactcenter" title="Impact Centers"><button class="btn btn-olive" type="button"><?php echo $pnm['cta1_btn']; ?> <i class="fa fa-angle-double-right"></i></button></a>
+                <h1><?php echo $pnm['home']['cta1']; ?></h1>
+                <p><?php echo $pnm['home']['cta1_content']; ?></p>
+                <a href="about.php#impactcenter" title="Impact Centers"><button class="btn btn-olive" type="button"><?php echo $pnm['home']['cta1_btn']; ?> <i class="fa fa-angle-double-right"></i></button></a>
               </div>
             </div>
             <div class="col-md-6 col-image"></div>
@@ -15,7 +15,7 @@
           <section class="row grid section-impact">
 
             <div class="col-md-12 col-row">
-              <h1><?php echo $pnm['cta2']; ?></h1>
+              <h1><?php echo $pnm['home']['cta2']; ?></h1>
             </div>
 
           </section>
@@ -25,8 +25,8 @@
             <div class="col-md-6 col-image"></div>
             <div class="col-md-6 col-caption">
               <div>
-                <h2><?php echo $pnm['cta3']; ?></h2>
-                <p><?php echo $pnm['cta3_content']; ?></p>
+                <h2><?php echo $pnm['home']['cta3']; ?></h2>
+                <p><?php echo $pnm['home']['cta3_content']; ?></p>
               </div>
             </div>
 
@@ -37,8 +37,8 @@
             <div class="col-md-6 col-md-push-6 col-image"></div>
             <div class="col-md-6 col-md-pull-6 col-caption">
               <div>
-                <h2><?php echo $pnm['cta4']; ?></h2>
-                <p><?php echo $pnm['cta4_content']; ?></p>
+                <h2><?php echo $pnm['home']['cta4']; ?></h2>
+                <p><?php echo $pnm['home']['cta4_content']; ?></p>
               </div>
             </div>
 
@@ -50,10 +50,10 @@
             <div class="col-md-6 col-caption">
               <div>
                 <h2>
-                  <?php echo $pnm['cta5']; ?>
+                  <?php echo $pnm['home']['cta5']; ?>
                 </h2>
-                <p><?php echo $pnm['cta5_content']; ?></p>
-                <a href="about.php#contact" title="Contact Us"><button class="btn btn-olive" type="button"><?php echo $pnm['cta5_btn']; ?> <i class="fa fa-angle-double-right"></i></button></a>
+                <p><?php echo $pnm['home']['cta5_content']; ?></p>
+                <a href="about.php#contact" title="Contact Us"><button class="btn btn-olive" type="button"><?php echo $pnm['home']['cta5_btn']; ?> <i class="fa fa-angle-double-right"></i></button></a>
               </div>
             </div>
 
@@ -62,7 +62,7 @@
           <section class="row grid section-thrive">
 
             <div class="col-md-12 col-row">
-              <h1 class="center"><?php echo $pnm['cta6']; ?></h1>
+              <h1 class="center"><?php echo $pnm['home']['cta6']; ?></h1>
             </div>
 
           </section>
@@ -73,12 +73,12 @@
                     <div class="feature-icon">
                       <img class="directory" src="assets/img/center-directory.svg" alt="">
                     </div>
-                    <h2 class="center"><?php echo $pnm['feature_title_1'] ?></h2>
+                    <h2 class="center"><?php echo $pnm['home']['feature_title_1'] ?></h2>
                     <div class="feature-text">
-                        <?php echo $pnm['feature_text_1']; ?>
+                        <?php echo $pnm['home']['feature_text_1']; ?>
                     </div>
                     <div class="feature-btn">
-                      <a href="about.php#impactcenter" title="Contact Us"><button class="btn btn-olive"><?php echo $pnm['feature_btn_1']; ?> <i class="fa fa-angle-double-right"></i></button></a>
+                      <a href="about.php#impactcenter" title="Contact Us"><button class="btn btn-olive"><?php echo $pnm['home']['feature_btn_1']; ?> <i class="fa fa-angle-double-right"></i></button></a>
                     </div>
                 </div>
 
@@ -86,12 +86,12 @@
                     <div class="feature-icon">
                       <img class="booking" src="assets/img/booking-tools.svg" alt="">
                     </div>
-                    <h2 class="center"><?php echo $pnm['feature_title_2']; ?></h2>
+                    <h2 class="center"><?php echo $pnm['home']['feature_title_2']; ?></h2>
                     <div class="feature-text">
-                      <?php echo $pnm['feature_text_2']; ?>
+                      <?php echo $pnm['home']['feature_text_2']; ?>
                     </div>
                     <div class="feature-btn">
-                      <a href="about.php#contact" title="Contact Us"><button class="btn btn-olive" type="button"><?php echo $pnm['feature_btn_2']; ?> <i class="fa fa-angle-double-right"></i></button></a>
+                      <a href="about.php#contact" title="Contact Us"><button class="btn btn-olive" type="button"><?php echo $pnm['home']['feature_btn_2']; ?> <i class="fa fa-angle-double-right"></i></button></a>
                     </div>
                 </div>
 
@@ -101,24 +101,24 @@
 
             <div class="cold-md-12 col-row">
 
-              <h1 class="center"><?php echo $pnm['subscribe_title']; ?></h1>
-              <p><?php echo $pnm['subscribe_intro']; ?></p>
+              <h1 class="center"><?php echo $pnm['home']['subscribe_title']; ?></h1>
+              <p><?php echo $pnm['home']['subscribe_intro']; ?></p>
 
               <form class="form-inline" id="newsletter-submit" action="" method="post" accept-charset="utf-8">
                 <div class="form-group">
-                  <label class="sr-only" for="firstname"></label>
-                  <input class="form-control" name="firstname" placeholder="First name" type="text" required>
+                  <label class="sr-only" for="firstname"><?php echo $forms['fields']['firstname'] ?></label>
+                  <input class="form-control" name="firstname" placeholder="<?php echo $forms['fields']['firstname'] ?>" type="text" required>
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="lastname"></label>
-                  <input class="form-control"  name="lastname" placeholder="Last name" type="text" required>
+                  <label class="sr-only" for="lastname"><?php echo $forms['fields']['lastname'] ?></label>
+                  <input class="form-control"  name="lastname" placeholder="<?php echo $forms['fields']['lastname'] ?>" type="text" required>
                 </div>
                 <div class="form-group">
-                  <label class="sr-only" for="email"></label>
-                  <input class="form-control" name="email" placeholder="Email" type="text" required>
+                  <label class="sr-only" for="email"><?php echo $forms['fields']['email'] ?></label>
+                  <input class="form-control" name="email" placeholder="<?php echo $forms['fields']['email'] ?>" type="text" required>
                 </div>
                 <div class="form-group">
-                  <button class="btn submit-btn" type="submit">Submit</button>
+                  <button class="btn submit-btn" type="submit"><?php echo $forms['fields']['submit'] ?></button>
                 </div>
               </form>
 
@@ -136,7 +136,7 @@
 
             <div class="cold-md-12 col-row">
 
-              <h1 class="center"><?php echo $pnm['blog_title']; ?></h1>
+              <h1 class="center"><?php echo $pnm['home']['blog_title']; ?></h1>
 
                 <?php
                   define('WP_USE_THEMES', false);
@@ -179,7 +179,7 @@
 
             <div class="cold-md-12 col-row">
 
-              <h1 class="center"><?php echo $pnm['press_title']; ?></h1>
+              <h1 class="center"><?php echo $pnm['home']['press_title']; ?></h1>
               <ul class="logo-list">
                 <li><img src="assets/img/logo-shareable.png" alt="Shareable Logo"></li>
                 <li><img src="assets/img/logo-utne.png" alt="UTNE Logo"></li>

@@ -1,0 +1,22 @@
+{
+    "criteria_list": [
+        {
+            "class": "earthcare",
+            "image" : "assets/img/icon-earthcare.svg",
+            "title" : "1. Earth Care",
+            "text" : "Emphasis on whole-system sustainability <span class='feature-highlight'>and/or</span> holistic health &amp; well-being"
+        },
+        {
+            "class": "education",
+            "image" : "assets/img/icon-education.svg",
+            "title" : "2. Education",
+            "text" : "Provides retreats, workshops, courses <span class='feature-highlight'>and/or</span> work-exchange or volunteering"
+        },
+        {
+            "class": "accommodation",
+            "image" : "assets/img/icon-accommodation.svg",
+            "title" : "3. Accommodation",
+            "text" : "Has the capacity to host individuals on-site for short or long-term stays"
+        }
+    ]
+}

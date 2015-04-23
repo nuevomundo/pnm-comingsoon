@@ -1,7 +1,4 @@
-<?php 
-$page_title = "About"; 
-$page_url = "/about.php"; 
-?>
+<?php $page_url = "/about.php"; $page_id = "about"; ?>
 <?php include('views/head.php'); ?>
 <body class="about">
 	<?php include('views/header.php'); ?>

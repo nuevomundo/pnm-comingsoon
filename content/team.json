@@ -1,0 +1,76 @@
+{
+    "team_member":
+    [{
+        "image": "assets/img/team-david.jpg",
+        "name": "David Casey",
+        "role": "Co-Founder and CEO",
+        "bio": "David has spent much of the past five years in Central America organizing cultural events, retreats, and ecovillage design courses. He also spent considerable time managing volunteers at a farm and worked with an indigenous artisan cooperative in Guatemala. His experience and BA in Political Economy of Industrial Societies and Global Poverty &amp; Practice from UC Berkeley are a pivotal foundation to the inspiration of PNM.",
+        "social": {
+            "twitter": "",
+            "linkedin": "http://www.linkedin.com/pub/david-casey/b/525/221",
+            "instagram": "",
+            "website": ""
+        }
+    },
+    {
+        "image": "assets/img/team-shayna.jpg",
+        "name": "Shayna Gladstone",
+        "role": "Co-Founder and COO",
+        "bio": "Shayna is an international eco-network weaver, entrepreneur, consultant, event producer and life-long earth-steward and has spent the past 2 years in Latin America connecting with local community and land regeneration projects. Shayna’s wide passion for building relationships, her eye for branding and her inspiring voice on social media are essential to the operations and marketing of PNM.",
+        "social": {
+            "twitter": "https://twitter.com/shaynagladstone",
+            "linkedin": "http://pe.linkedin.com/pub/shayna-gladstone/58/287/458",
+            "instagram": "",
+            "website": "http://www.dreamactivation.com/"
+        }
+    },
+    {
+        "image": "assets/img/team-erika.jpg",
+        "name": "Erika Logie",
+        "role": "Co-Founder and CCO",
+        "bio": "Erika has spent the last decade working in user experience and user interface design, and has worked with Disney, Fox, ABC and NBC. She played a pivotal role in running a newly founded eco-village in Nicaragua through marketing, event organizing, administrative management and conflict mediation. When she's not making things beautiful, Erika can be found dancing, hula hooping and snuggling with her cats.",
+        "social": {
+            "twitter": "https://twitter.com/erikalogie",
+            "linkedin": "http://www.linkedin.com/pub/erika-logie/7/564/3a1",
+            "instagram": "http://instagram.com/erikalogie",
+            "website": "http://erikalogie.com/"
+        }
+    },
+    {
+        "image": "assets/img/team-jennifer.jpg",
+        "name": "Jennifer Schmidt",
+        "role": "Co-Founder and CFO",
+        "bio": "Jennifer has over 14 years of experience with business development and has a background in project management, finance, tax, and sales consulting and has started 8 successful businesses. Apart from business and finances, she fuses her passions for artistic expression and the earth by consulting for sustainable and community-oriented projects and creating incredible visionary paintings.",
+        "social": {
+            "twitter": "",
+            "linkedin": "http://www.linkedin.com/pub/jennifer-schmidt/73/b41/a",
+            "instagram": "",
+            "website": ""
+        }
+    },
+    {
+        "image": "assets/img/team-eric.jpg",
+        "name": "Eric Garcia",
+        "role": "CTO",
+        "bio": "Eric is a Data Scientist and holds a PhD in Electrical Engineering from the University of Washington. He has experience building web applications for two data-driven technology startups and is passionate about creating tools that enable communities to organize information and resources to build sustainable local infrastructures.",
+        "social": {
+            "twitter": "",
+            "linkedin": "http://www.linkedin.com/in/corndog",
+            "instagram": "",
+            "website": ""
+        }
+    },
+    {
+        "image": "assets/img/team-taylor.jpg",
+        "name": "Taylor Proffitt",
+        "role": "Network Guide",
+        "bio": "Taylor Proffitt is a travel journalist, alliance builder, organic gardener, and community activist. He works from the back end of multiple networks and organizations to enable resource sharing. Each day Taylor strives to make small changes toward a more socially and ecologically just planet while continually discovering new centers who align with these values.",
+        "social": {
+            "twitter": "",
+            "linkedin": "http://www.linkedin.com/in/taylorproffitt",
+            "instagram": "",
+            "website": ""
+        }
+    }
+    ]
+}
