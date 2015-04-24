@@ -445,7 +445,23 @@ h2 {
 /* -----------------------------------------------
   Content
   ------------------------------------------------ */
-
+body.generic {
+    background: transparent url("../img/world-bg-opaque.jpg") no-repeat top center;
+}
+.generic .grid {
+  margin: 0;
+  min-height: 500px;
+  padding: 50px 20px 0 20px;
+  @include mq($from: tablet) {
+    min-height: 600px;
+    padding: 200px 0 0 0;
+  }
+}
+.error404 h1, .error404 h1 {
+  font-size: 100px;
+  color: color('teal', 'shade');
+  font-weight: 700;
+}
 ul.logo-list {
   list-style: none;
   padding: 0;
