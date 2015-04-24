@@ -42,7 +42,7 @@ $(document).ready(function () {
 		            },
 		            error: function (xhr, ajaxOptions, thrownError) {
 		                $('.submit-btn').val(error_btn);
-		                $(form).append(error_msg);
+		                $(form).append('<span class="submit-success"> ' + error_msg + '</span>');
 		            	$('input').val('');
 		            }
 		        })
@@ -74,7 +74,7 @@ $(document).ready(function () {
 		            },
 		            error: function (xhr, ajaxOptions, thrownError) {
 		                $('.submit-btn').val(error_btn);
-		                $('.submit-btn').before(error_msg);
+		                $('.submit-btn').before('<span class="submit-success"> ' + error_msg + '</span>');
 		            	$('input').val('');
 		            }
 		        });
