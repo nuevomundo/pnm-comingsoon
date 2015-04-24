@@ -1,14 +1,11 @@
 <?php
-    // Application date
-    date_default_timezone_set('Etc/UTC');
-
-    // get json for error messages
-    include('../../config.php');
 
     if (isset($_POST["email"]) && $_POST["email"] != "" && isValidEmail($_POST["email"]) ) {
 
+        // get json for error messages
+        include('../../config.php');
+        include('auth.php');
         require 'phpmailer/PHPMailerAutoload.php';
-        include 'auth.php';
 
         // Applicant Personal Data
         $firstname = trim($_POST["firstname"]);
@@ -16,7 +13,7 @@
         $email = trim($_POST["email"]);
         $reason = trim($_POST["reason_interested"]);
         $message = trim($_POST["message"]);
-        $ip = $_SERVER['REMOTE_ADDR'];
+        //$ip = $_SERVER['REMOTE_ADDR'];
 
         //Create a new PHPMailer instance
         $mail = new PHPMailer();
@@ -26,13 +23,16 @@
         $mail->SMTPDebug = 0;
         $mail->Debugoutput = 'html';
         $mail->IsHTML(true);
-        $mail->Host = $mail_host;
-        $mail->Port = $mail_port;
-        $mail->SMTPSecure = $mail_ssl;
-        $mail->SMTPAuth = true;
-        $mail->Username = $mail_user;
-        $mail->Password = $mail_pass;
-
+        $mail->Host         = $mail_host;
+        $mail->Port         = $mail_port;
+        $mail->SMTPAuth     = true;
+        $mail->SMTPSecure   = $mail_ssl;
+        $mail->Username     = $mail_user;
+        $mail->Password     = $mail_pass;
+        $mail->Priority     = 1; // Highest priority - Email priority (1 = High, 3 = Normal, 5 = low)
+        $mail->CharSet      = 'UTF-8';
+        $mail->Encoding     = '8bit';
+        $mail->ContentType  = 'text/html; charset=utf-8\r\n';
         // send email
         $mail->SetFrom($email);
         $mail->addAddress($sendto);
@@ -41,14 +41,16 @@
         $mail->Body .= '<strong>Email:</strong> ' . $email . '</p>';
         $mail->Body .= '<p><strong>Reason for interest:</strong> ' . $reason . '<br />';
         $mail->Body .= '<strong>Message:</strong> ' . $message . '</p>';
-        $mail->Body .= '<p>Sent from ' . $ip . ' / </p>';
+        //$mail->Body .= '<p>Sent from ' . $ip . ' / </p>';
 
         //send confirmation email, check for errors
         if (!$mail->send()) {
-            echo $forms['messages']['error'] . ' ' . $mail->ErrorInfo;
+            echo $forms['messages']['error_msg'] . ' ' . $mail->ErrorInfo;
         } else {
             echo $forms['messages']['send_success'];
         }
+
+        $mail->SmtpClose();
 
         // submit to bitrix
         $bitrix_dataset = array(
