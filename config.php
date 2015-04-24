@@ -2,7 +2,7 @@
 //error_reporting(0);
 
 // wordpress path
-$blog_path = '../pnm-blog/wp-blog-header.php';
+$blog_path = 'blog/wp-blog-header.php';
 
 // json path
 DEFINE('BASE_URL', __DIR__ . '/');

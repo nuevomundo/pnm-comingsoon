@@ -723,7 +723,7 @@ body.generic {
       min-height: 600px;
       padding: 200px 0 0 0; } }
 
-.error404 h1, .error404 h1 {
+.error404 h1, .error500 h1 {
   font-size: 100px;
   color: #1b7876;
   font-weight: 700; }
