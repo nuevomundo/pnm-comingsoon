@@ -137,6 +137,9 @@ h2 {
       cursor:pointer;
       height: 54px;
     }
+    select::-ms-expand {
+      display: none;
+    }
     label.selectlbl {
       width: 100%;
       display: block;
@@ -260,9 +263,9 @@ h2 {
     }
   }
   &-brand img {
-    max-width: 220px;
+    width: 220px;
     @include mq($from: tabletLandscape) {
-      max-width: 260px;
+      width: 260px;
     }
   }
   &-right {
@@ -375,7 +378,7 @@ h2 {
   @include mq($from: desktop) {
      margin-bottom: 50px;
      padding: 0 50px;
-     min-height: 500px;
+     min-height: 550px;
   }
   h2 {
     font-size: $h2-ftsize;
@@ -433,7 +436,8 @@ h2 {
       display: inline;
       margin: 0 2px;
       img {
-        max-width: 30px;
+        width: 30px;
+        height: 30px;
       }
     }
   }
@@ -498,7 +502,8 @@ footer.content-info {
       display: inline;
       margin-right: 3px;
       img {
-        max-width: 30px;
+        width: 30px;
+        height: 30px;
       }
     }
   }

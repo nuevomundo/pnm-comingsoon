@@ -455,6 +455,8 @@ form.form-inline select, form.form-horizontal select, form.form select {
   @media (min-width: 48em) {
     form.form-inline select, form.form-horizontal select, form.form select {
       display: inline-block; } }
+form.form-inline select::-ms-expand, form.form-horizontal select::-ms-expand, form.form select::-ms-expand {
+  display: none; }
 form.form-inline label.selectlbl, form.form-horizontal label.selectlbl, form.form label.selectlbl {
   width: 100%;
   display: block;
@@ -552,10 +554,10 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
       .navbar-brand {
         padding: 0; } }
   .navbar-brand img {
-    max-width: 220px; }
+    width: 220px; }
     @media (min-width: 48em) {
       .navbar-brand img {
-        max-width: 260px; } }
+        width: 260px; } }
   .navbar-right {
     margin-top: 10px; }
   .navbar-collapse {
@@ -649,7 +651,7 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
     .feature, .team {
       margin-bottom: 50px;
       padding: 0 50px;
-      min-height: 500px; } }
+      min-height: 550px; } }
   .feature h2, .team h2 {
     font-size: 38px;
     color: #1b7876;
@@ -700,7 +702,8 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
       display: inline;
       margin: 0 2px; }
       .feature-social li img, .team-social li img {
-        max-width: 30px; }
+        width: 30px;
+        height: 30px; }
 
 .team-icon img {
   padding: 0; }
@@ -756,7 +759,8 @@ footer.content-info {
       display: inline;
       margin-right: 3px; }
       footer.content-info .social li img {
-        max-width: 30px; }
+        width: 30px;
+        height: 30px; }
   footer.content-info span.copyright {
     margin: 6px 0 0 5px;
     display: inline-block; }
