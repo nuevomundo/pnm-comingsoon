@@ -21,7 +21,7 @@
           <li class="about"><a href="about.php">About</a></li>
           <li class="blog"><a href="http://projectnuevomundo.com/blog" target="_blank">Blog</a></li>
           <li class="list-btn">
-              <button class="btn" type="button" data-toggle="modal" data-target="#listCenterModal">List Center</button>
+              <a href="https://pnm.typeform.com/to/UHaXXV" target="_blank"><button class="btn" type="button" data-toggle="modal" data-target="#listCenterModal">List Center</button></a>
           </li>
         </ul>
       </div>

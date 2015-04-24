@@ -12,7 +12,7 @@
 		<span class="copyright"><?php echo $pnm['config']['footer_comment']; ?></span>
 	</div>
 </footer>
-<?php include('modal.php'); ?>
+<?php //include('modal.php'); ?>
 
 <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 <script src='assets/js/plugins.min.js'></script>
