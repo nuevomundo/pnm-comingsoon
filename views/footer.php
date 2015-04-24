@@ -17,10 +17,10 @@
 <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 <script src='assets/js/plugins.min.js'></script>
 <script src='assets/js/app.min.js'></script>
-<?php if ($pnm["analytics"]): ?>
+<?php if ($pnm["config"]["analytics"]): ?>
 	<script>
 	  var _gaq = _gaq || [];
-	  _gaq.push(['_setAccount', '<?php echo $pnm["analytics"] ?>']);
+	  _gaq.push(['_setAccount', '<?php echo $pnm["config"]["analytics"] ?>']);
 	  _gaq.push(['_trackPageview']);
 
 	  (function() {
