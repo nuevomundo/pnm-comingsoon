@@ -16,6 +16,7 @@
         $email = trim($_POST["email"]);
         $reason = trim($_POST["reason_interested"]);
         $message = trim($_POST["message"]);
+        $ip = $_SERVER['REMOTE_ADDR'];
 
         //Create a new PHPMailer instance
         $mail = new PHPMailer();
@@ -40,6 +41,7 @@
         $mail->Body .= '<strong>Email:</strong> ' . $email . '</p>';
         $mail->Body .= '<p><strong>Reason for interest:</strong> ' . $reason . '<br />';
         $mail->Body .= '<strong>Message:</strong> ' . $message . '</p>';
+        $mail->Body .= '<p>Sent from ' . $ip . ' / </p>';
 
         //send confirmation email, check for errors
         if (!$mail->send()) {
