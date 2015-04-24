@@ -2,11 +2,11 @@
 	<div class="container">
 		<div class="social">
 			<ul>
-				<li><a href="http://facebook.com/ProjectNuevoMundo"><img src="assets/img/icon-facebook.svg" alt=""></a></li>
-				<li><a href="http://twitter.com/PrjctNuevoMundo"><img src="assets/img/icon-twitter.svg" alt=""></a></li>
-				<li><a href="http://instagram.com/project_nuevo_mundo/"><img src="assets/img/icon-instagram.svg" alt=""></a></li>
-				<li><a href="http://vimeo.com/projectnuevomundo"><img src="assets/img/icon-vimeo.svg" alt=""></a></li>
-				<li><a href="http://www.linkedin.com/company/project-nuevo-mundo"><img src="assets/img/icon-linkedin.svg" alt=""></a></li>
+				<li><a target="_blank" href="http://facebook.com/ProjectNuevoMundo" title="Link to Facebook"><img src="assets/img/icon-facebook.svg" alt=""></a></li>
+				<li><a target="_blank" href="http://twitter.com/PrjctNuevoMundo" title="Link to Twitter"><img src="assets/img/icon-twitter.svg" alt=""></a></li>
+				<li><a target="_blank" href="http://instagram.com/project_nuevo_mundo/" title="Link to Instagram"><img src="assets/img/icon-instagram.svg" alt=""></a></li>
+				<li><a target="_blank" href="http://vimeo.com/projectnuevomundo" title="Link to Vimeo"><img src="assets/img/icon-vimeo.svg" alt=""></a></li>
+				<li><a target="_blank" href="http://www.linkedin.com/company/project-nuevo-mundo" title="Link to Linkedin"><img src="assets/img/icon-linkedin.svg" alt=""></a></li>
 			</ul>
 		</div>
 		<span class="copyright"><?php echo $pnm['config']['footer_comment']; ?></span>
