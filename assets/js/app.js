@@ -1,29 +1,23 @@
 $(document).ready(function () {
 
-	// get forms json
-	$.ajax({
-      url:  "content/forms.json",
-      success: callback
-  });
+	// navi classes
+	$('body.about nav.navbar li.about').addClass('active');
 
-	var callback = function (jsonData) {
-		var submit_btn = jsonData.fields.submit;
-		var required = jsonData.messages.required;
-    var email_req = jsonData.messages.email_required;
-    var error_msg = jsonData.messages.error_msg;
-    var error_btn = jsonData.messages.error_btn;
-    //console.log(email_req);
+	// svg fallbacks
+	svgeezy.init(false, 'png');
 
-		// navi classes
-		$('body.about nav.navbar li.about').addClass('active');
+	// forms
+	$('#newsletter-submit input, #contact-form input').on('focusout', function(){
+		$('label.error').hide();
+	});
 
-		// svg fallbacks
-		svgeezy.init(false, 'png');
+	var initForms = function (jsonData) {
 
-		// forms
-		$('#newsletter-submit input, #contact-form input').on('focusout', function(){
-			$('label.error').hide();
-		});
+		var submit_btn 	= jsonData.fields.submit;
+		var required 	= jsonData.messages.required;
+	    var email_req 	= jsonData.messages.email_required;
+	    var error_msg 	= jsonData.messages.error_msg;
+	    var error_btn 	= jsonData.messages.error_btn;
 
 		// submit newsletter
 		$("#newsletter-submit").validate({
@@ -89,7 +83,11 @@ $(document).ready(function () {
 
 	};
 
-    // ).responseText);
+	// get forms json
+	$.ajax({
+      url:  "content/forms.json",
+      success: initForms
+ 	});
 
 
 });
