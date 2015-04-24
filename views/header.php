@@ -17,7 +17,7 @@
 
       <div class="collapse navbar-collapse navbar-right">
         <ul class="nav navbar-nav">
-          <!--  <li class="centers"><a href="#">Centers</a></li> -->
+          <!-- <li class="centers"><a href="#">Centers</a></li> -->
           <li class="about"><a href="about.php">About</a></li>
           <li class="blog"><a href="http://projectnuevomundo.com/blog" target="_blank">Blog</a></li>
           <li class="list-btn">

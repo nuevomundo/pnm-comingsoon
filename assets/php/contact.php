@@ -3,7 +3,7 @@
     date_default_timezone_set('Etc/UTC');
 
     // get json for error messages
-    include('../../config.php')
+    include('../../config.php');
 
     if (isset($_POST["email"]) && $_POST["email"] != "" && isValidEmail($_POST["email"]) ) {
 
@@ -67,9 +67,9 @@
         // $url = 'http://pnm.bitrix24.com/crm/configs/import/lead.php?' . urldecode($query);
         // echo "<pre>"; print_r($url); echo "</pre>";
 
-        // Get cURL resource
+        // use curl to send httprequest
         $curl = curl_init();
-        // Set some options - we are passing in a useragent too here
+        // set options
         curl_setopt_array($curl, array(
             CURLOPT_URL => 'http://pnm.bitrix24.com/crm/configs/import/lead.php',
             CURLOPT_FOLLOWLOCATION => true,
