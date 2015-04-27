@@ -18,6 +18,16 @@ module.exports = function(grunt) {
 		    dest: 'assets/css/plugins.min.css'
 		  }
 		},
+		autoprefixer: {
+			dist: {
+				options: {
+					browsers: ['last 1 version', '> 1%', 'ie 8']
+				},
+				files: {
+					'assets/css/app.css': ['assets/css/app.css']
+				}
+			}
+		},
 		cssmin: {
 			target: {
 			    files: [{
@@ -44,6 +54,10 @@ module.exports = function(grunt) {
 					livereload: false
 				}
 			},
+			autoprefixer: {
+				files: ['assets/css/app.css'],
+				tasks: ['autoprefixer']
+			},
 			cssmin: {
 				files: ['assets/css/app.css'],
 				tasks: ['cssmin']
@@ -59,9 +73,10 @@ module.exports = function(grunt) {
 		}
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('default', ['watch']);
