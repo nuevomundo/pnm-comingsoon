@@ -1,29 +1,23 @@
 $(document).ready(function () {
 
-	// get forms json
-	$.ajax({
-      url:  "content/forms.json",
-      success: callback
-  });
+	// navi classes
+	$('body.about nav.navbar li.about').addClass('active');
 
-	var callback = function (jsonData) {
-		var submit_btn = jsonData.fields.submit;
-		var required = jsonData.messages.required;
-    var email_req = jsonData.messages.email_required;
-    var error_msg = jsonData.messages.error_msg;
-    var error_btn = jsonData.messages.error_btn;
-    //console.log(email_req);
+	// svg fallbacks
+	svgeezy.init(false, 'png');
 
-		// navi classes
-		$('body.about nav.navbar li.about').addClass('active');
+	// forms
+	$('#newsletter-submit input, #contact-form input').on('focusout', function(){
+		$('label.error').hide();
+	});
 
-		// svg fallbacks
-		svgeezy.init(false, 'png');
+	var initForms = function (jsonData) {
 
-		// forms
-		$('#newsletter-submit input, #contact-form input').on('focusout', function(){
-			$('label.error').hide();
-		});
+		var submit_btn 	= jsonData.fields.submit;
+		var required 	= jsonData.messages.required;
+	    var email_req 	= jsonData.messages.email_required;
+	    var error_msg 	= jsonData.messages.error_msg;
+	    var error_btn 	= jsonData.messages.error_btn;
 
 		// submit newsletter
 		$("#newsletter-submit").validate({
@@ -48,7 +42,7 @@ $(document).ready(function () {
 		            },
 		            error: function (xhr, ajaxOptions, thrownError) {
 		                $('.submit-btn').val(error_btn);
-		                $(form).append(error_msg);
+		                $(form).append('<span class="submit-success"> ' + error_msg + '</span>');
 		            	$('input').val('');
 		            }
 		        })
@@ -80,7 +74,7 @@ $(document).ready(function () {
 		            },
 		            error: function (xhr, ajaxOptions, thrownError) {
 		                $('.submit-btn').val(error_btn);
-		                $('.submit-btn').before(error_msg);
+		                $('.submit-btn').before('<span class="submit-success"> ' + error_msg + '</span>');
 		            	$('input').val('');
 		            }
 		        });
@@ -89,7 +83,11 @@ $(document).ready(function () {
 
 	};
 
-    // ).responseText);
+	// get forms json
+	$.ajax({
+      url:  "content/forms.json",
+      success: initForms
+ 	});
 
 
 });

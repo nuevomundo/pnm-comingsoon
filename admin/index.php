@@ -95,15 +95,18 @@
       }
       .save-btn {
         min-width: 120px;
-        background: #f26746;
-        border-color: #f26746;
+        background: #32bfc1;
+        border-color: #32bfc1;
       }
       .save-btn:hover {
-        background:#d44712;
-        border-color: #d44712;
+        background:#1b7876;
+        border-color: #1b7876;
       }
       .tab-content {
         margin-top: 20px;
+      }
+      .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+        background-color: #e8e8e8;
       }
       ul.nav.nav-tabs a {
         color: #1a1a1a;

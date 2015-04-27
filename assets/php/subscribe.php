@@ -1,6 +1,6 @@
 <?php
     // get json for error messages
-    include('../../config.php')
+    include('../../config.php');
 
 	if (isset($_POST["email"]) && $_POST["email"] != "" && isValidEmail($_POST["email"]) ) {
 

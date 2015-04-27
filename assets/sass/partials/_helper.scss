@@ -3,6 +3,17 @@
 // Helper functions
 // ----------------------------------------------------------------------------
 
+// Internet Explorer
+// .ie9 img[src*=".svg"] {
+//   width: 100%;
+// }
+// /* 2 */
+// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+//   img[src*=".svg"] {
+//     width: 100%;
+//   }
+// }
+
 %default-margin { margin: 10px 0; }
 
 %vertical-align {
