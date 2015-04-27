@@ -5,7 +5,6 @@
         // get json for error messages
         include('../../config.php');
         include('auth.php');
-        require 'phpmailer/PHPMailerAutoload.php';
 
         // Applicant Personal Data
         $firstname = trim($_POST["firstname"]);
@@ -13,44 +12,23 @@
         $email = trim($_POST["email"]);
         $reason = trim($_POST["reason_interested"]);
         $message = trim($_POST["message"]);
-        //$ip = $_SERVER['REMOTE_ADDR'];
 
-        //Create a new PHPMailer instance
-        $mail = new PHPMailer();
-        //Tell PHPMailer to use SMTP
-        $mail->isSMTP();
-        //Enable SMTP debugging: 0 = off (for production use), 1 = client messages, 2 = client and server messages
-        $mail->SMTPDebug = 0;
-        $mail->Debugoutput = 'html';
-        $mail->IsHTML(true);
-        $mail->Host         = $mail_host;
-        $mail->Port         = $mail_port;
-        $mail->SMTPAuth     = true;
-        $mail->SMTPSecure   = $mail_ssl;
-        $mail->Username     = $mail_user;
-        $mail->Password     = $mail_pass;
-        $mail->Priority     = 1; // Highest priority - Email priority (1 = High, 3 = Normal, 5 = low)
-        $mail->CharSet      = 'UTF-8';
-        $mail->Encoding     = '8bit';
-        $mail->ContentType  = 'text/html; charset=utf-8\r\n';
-        // send email
-        $mail->SetFrom($email);
-        $mail->addAddress($sendto);
-        $mail->Subject = 'PNM Form submitted by ' . $firstname . ' ' . $lastname . ' (' . $email . ')';
-        $mail->Body = '<p><strong>Sent from</strong> ' . $firstname . ' ' . $lastname . '<br />';
-        $mail->Body .= '<strong>Email:</strong> ' . $email . '</p>';
-        $mail->Body .= '<p><strong>Reason for interest:</strong> ' . $reason . '<br />';
-        $mail->Body .= '<strong>Message:</strong> ' . $message . '</p>';
-        //$mail->Body .= '<p>Sent from ' . $ip . ' / </p>';
+        $subject = 'PNM Form submitted by ' . $firstname . ' ' . $lastname . ' (' . $email . ')';
+        $content = '<p><strong>Sent from</strong> ' . $firstname . ' ' . $lastname . '<br />';
+        $content .= '<strong>Email:</strong> ' . $email . '</p>';
+        $content .= '<p><strong>Reason for interest:</strong> ' . $reason . '<br />';
+        $content .= '<strong>Message:</strong> ' . $message . '</p>';
 
-        //send confirmation email, check for errors
-        if (!$mail->send()) {
-            echo $forms['messages']['error_msg'] . ' ' . $mail->ErrorInfo;
+        $headers  = 'MIME-Version: 1.0' . "\r\n";
+        $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $headers .= 'From: ' . $email . "\r\n";
+        $headers .= 'Reply-To: ' . $email . "\r\n";
+
+        if (!mail($sendto, $subject, $content, $headers)) {
+            echo $forms['messages']['error_msg'] . ' ' . error_get_last();
         } else {
             echo $forms['messages']['send_success'];
         }
-
-        $mail->SmtpClose();
 
         // submit to bitrix
         $bitrix_dataset = array(
@@ -85,7 +63,7 @@
         ));
         // Send the request & save response to $resp
         $resp = curl_exec($curl);
-        //echo "<pre>"; print_r($resp); echo "</pre>";
+        // echo "<pre>"; print_r($resp); echo "</pre>";
 
         curl_close($curl);
 
