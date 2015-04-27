@@ -35,6 +35,36 @@
   }
 }
 
+@mixin fancy-btns($hover_color, $transition) {
+    position: relative;
+    overflow: hidden;
+    //overflow bug fix
+    opacity: .99;
+    z-index: 10;
+    transition: $transition;
+    &:before {
+      z-index: -1;
+      content: '';
+      background-color: $hover_color;
+      width: 150%;
+      height: 350%;
+      position: absolute;
+      top: 150%;
+      left: -70%;
+      transform: rotate(25deg);
+      transition: $transition;
+    }
+    &:hover {
+      &:before {
+        top: -160%;
+        left: -0%;
+      }
+    }
+    &:focus {
+      opacity: .85;
+    }
+}
+
 @mixin col-image($height,$align-lcr,$align-tcb,$url) {
   .col-image {
     @include mq-scale-between-devices((height: $height),tablet,desktop);

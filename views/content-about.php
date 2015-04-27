@@ -80,7 +80,7 @@
 
               <div class="col-md-4 feature">
                <div class="feature-icon <?php echo $feature['class']; ?>">
-                  <img class="booking" src="<?php echo $feature['image']; ?>" alt="">
+                  <img src="<?php echo $feature['image']; ?>" alt="">
                 </div>
                 <h2 class="center"><?php echo $feature['title']; ?></h2>
                 <div class="feature-text">

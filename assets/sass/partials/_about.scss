@@ -50,13 +50,15 @@
     .feature-icon {
       &.earthcare {
         background-color: color('olive', 'base');
+        img {padding-top: 25px;}
       }
       &.education {
         background-color: color('red');
-        img {padding-top: 10px;}
+        img {padding-top: 20px;}
       }
       &.accommodation {
         background-color: color('teal', 'base');
+        img {padding-top: 30px;}
       }
     }
   }

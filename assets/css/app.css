@@ -257,9 +257,6 @@ h1, h2, .col-caption p, .feature p, .team p {
     .about .grid.section-about .col-image {
       height: 600px; } }
 .about .grid.section-about .radial-bg {
-  background-image: -ms-radial-gradient(center, ellipse farthest-corner, white 0%, rgba(255, 255, 255, 0) 70%);
-  background-image: -moz-radial-gradient(center, ellipse farthest-corner, white 0%, rgba(255, 255, 255, 0) 70%);
-  background-image: -o-radial-gradient(center, ellipse farthest-corner, white 0%, rgba(255, 255, 255, 0) 70%);
   background-image: -webkit-gradient(radial, center center, 0, center center, 125, color-stop(0, white), color-stop(70, rgba(255, 255, 255, 0)));
   background-image: -webkit-radial-gradient(center, ellipse farthest-corner, white 0%, rgba(255, 255, 255, 0) 70%);
   background-image: radial-gradient(ellipse farthest-corner at center, white 0%, rgba(255, 255, 255, 0) 70%); }
@@ -331,12 +328,16 @@ h1, h2, .col-caption p, .feature p, .team p {
       padding: 0; } }
 .about .grid.section-criteria .feature-icon.earthcare {
   background-color: #b2c049; }
+  .about .grid.section-criteria .feature-icon.earthcare img {
+    padding-top: 25px; }
 .about .grid.section-criteria .feature-icon.education {
   background-color: #f26746; }
   .about .grid.section-criteria .feature-icon.education img {
-    padding-top: 10px; }
+    padding-top: 20px; }
 .about .grid.section-criteria .feature-icon.accommodation {
   background-color: #32bfc1; }
+  .about .grid.section-criteria .feature-icon.accommodation img {
+    padding-top: 30px; }
 .about .grid.section-contact {
   background-color: #f26746; }
   .about .grid.section-contact .col-row {
@@ -355,6 +356,9 @@ h1, h2, .col-caption p, .feature p, .team p {
 /* -----------------------------------------------
   Base
   ------------------------------------------------ */
+html {
+  box-sizing: border-box; }
+
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
@@ -406,19 +410,50 @@ h2 {
   border-color: #32bfc1;
   padding: 14px 24px;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  opacity: .99;
+  z-index: 10;
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59); }
   .btn-olive i {
     margin-left: 5px; }
   .btn-olive:hover {
     color: white;
-    background: #32bfc1; }
+    background: transparent; }
+  .btn-olive:before {
+    z-index: -1;
+    content: '';
+    background-color: #32bfc1;
+    width: 150%;
+    height: 350%;
+    position: absolute;
+    top: 150%;
+    left: -70%;
+    -webkit-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+            transform: rotate(25deg);
+    -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+            transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59); }
+  .btn-olive:hover:before {
+    top: -160%;
+    left: -0%; }
+  .btn-olive:focus {
+    opacity: .85; }
 
 .btn-red, form.form-inline button, form.form-horizontal button, form.form button {
   color: white;
   font-size: 16px;
   border-color: white;
   background-color: #f26746;
-  padding: 10px; }
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  opacity: .99;
+  z-index: 10;
+  -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+          transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59); }
   @media (min-width: 30em) {
     .btn-red, form.form-inline button, form.form-horizontal button, form.form button {
       padding: 10px 20px; } }
@@ -426,7 +461,26 @@ h2 {
     margin-right: 5px; }
   .btn-red:hover, form.form-inline button:hover, form.form-horizontal button:hover, form.form button:hover {
     color: #f26746;
-    background: white; }
+    background: transparent; }
+  .btn-red:before, form.form-inline button:before, form.form-horizontal button:before, form.form button:before {
+    z-index: -1;
+    content: '';
+    background-color: white;
+    width: 150%;
+    height: 350%;
+    position: absolute;
+    top: 150%;
+    left: -70%;
+    -webkit-transform: rotate(25deg);
+        -ms-transform: rotate(25deg);
+            transform: rotate(25deg);
+    -webkit-transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59);
+            transition: all 0.35s cubic-bezier(0.31, -0.105, 0.43, 1.59); }
+  .btn-red:hover:before, form.form-inline button:hover:before, form.form-horizontal button:hover:before, form.form button:hover:before {
+    top: -160%;
+    left: -0%; }
+  .btn-red:focus, form.form-inline button:focus, form.form-horizontal button:focus, form.form button:focus {
+    opacity: .85; }
 
 /* -----------------------------------------------
   Forms
@@ -674,14 +728,17 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
     width: 170px;
     height: 170px;
     background: #e3e3e3;
-    border-radius: 50%; }
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: .99; }
     .feature-icon img, .team-icon img {
-      padding: 20px;
-      max-width: 170px; }
+      max-width: 170px;
+      -webkit-transition: all 0.2s ease;
+              transition: all 0.2s ease; }
     .feature-icon img.booking, .team-icon img.booking {
-      margin-top: 15px; }
+      margin-top: 35px; }
     .feature-icon img.directory, .team-icon img.directory {
-      margin-top: 3px; }
+      margin-top: 25px; }
   .feature-subtitle, .team-subtitle {
     text-transform: uppercase !important;
     font-size: 12px;
@@ -741,6 +798,14 @@ ul.logo-list {
         ul.logo-list li img {
           max-width: 300px; } }
 
+.fancy-icons, .feature-social li img, .team-social li img, footer.content-info .social li img {
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
+  .fancy-icons:hover, .feature-social li img:hover, .team-social li img:hover, footer.content-info .social li img:hover {
+    -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+            transform: scale(1.15); }
+
 /* -----------------------------------------------
   Footer
   ------------------------------------------------ */
@@ -764,5 +829,3 @@ footer.content-info {
   footer.content-info span.copyright {
     margin: 6px 0 0 5px;
     display: inline-block; }
-
-/*# sourceMappingURL=app.css.map */

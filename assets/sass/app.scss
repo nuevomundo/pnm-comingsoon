@@ -16,6 +16,9 @@ $h1-ftsize: 48px;
 $h2-ftsize: 38px;
 $subline-ftsize: 18px;
 
+$default-transition: all 0.2s ease;
+$btn-transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
+
 // partials
 
 @import "partials/colors";
@@ -28,6 +31,10 @@ $subline-ftsize: 18px;
 /* -----------------------------------------------
   Base
   ------------------------------------------------ */
+
+html {
+  box-sizing: border-box;
+}
 
 body {
   font-family: $copy-font;
@@ -83,8 +90,9 @@ h2 {
     i {margin-left: 5px;}
     &:hover {
       color: white;
-      background: color('teal', 'base');
+      background: transparent;
     }
+    @include fancy-btns( color('teal', 'base'), $btn-transition);
   }
 
   .btn-red {
@@ -100,9 +108,10 @@ h2 {
       margin-right: 5px;
     }
     &:hover {
-      color: color('red', 'base');
-      background: white;
+      color: color('red');
+      background: transparent;
     }
+    @include fancy-btns( white, $btn-transition);
   }
 
 /* -----------------------------------------------
@@ -401,17 +410,26 @@ h2 {
     height: 170px;
     background: color('gray');
     border-radius: 50%;
+    overflow:hidden;
+    //overflow bug fix
+    opacity: .99;
     img {
-      padding: 20px;
-      max-width:170px;
+      max-width: 170px;
+      transition: $default-transition;
     }
     img.booking {
-      margin-top:15px;
+      margin-top:35px;
     }
     img.directory {
-      margin-top:3px;
+      margin-top:25px;
     }
   }
+  // SAFARI CLIPPING NEEDS FIXING
+  // &-icon:hover img  {
+  //   overflow: hidden;
+  //   transform: scale(1.1);
+  //   transition: $default-transition;
+  // }
   &-subtitle {
     text-transform: uppercase !important;
     font-size: $copy-ftsize - 2px;
@@ -438,6 +456,7 @@ h2 {
       img {
         width: 30px;
         height: 30px;
+        @extend .fancy-icons;
       }
     }
   }
@@ -482,6 +501,13 @@ ul.logo-list {
   }
 }
 
+.fancy-icons {
+  transition: $default-transition;
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
 /* -----------------------------------------------
   Footer
   ------------------------------------------------ */
@@ -504,6 +530,7 @@ footer.content-info {
       img {
         width: 30px;
         height: 30px;
+        @extend .fancy-icons;
       }
     }
   }
