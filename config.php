@@ -2,7 +2,28 @@
 //error_reporting(0);
 
 // wordpress path
-$blog_path = 'blog/wp-blog-header.php';
+$blog_path = '../pnm-blog/wp-blog-header.php';
+
+// get browser language base with substr
+$browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+switch ($browser_lang){
+    case "en":
+		$lang = "en";
+        break;
+    case "es":
+    	$lang = "es";
+        break;
+    default:
+		$lang = "en";
+        break;
+}
+
+// get language in url
+if (isset($_GET['lang'])) {
+	$lang = $_GET['lang'];
+} else {
+	$lang = "en";
+}
 
 // json path
 DEFINE('BASE_URL', __DIR__ . '/');

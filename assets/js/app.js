@@ -11,13 +11,33 @@ $(document).ready(function () {
 		$('label.error').hide();
 	});
 
+	// lang switch
+	var base_url= window.location.href.split('?')[0];
+	var query = location.search;
+	if (query == "") {
+		$('.setlang li.en').addClass('active');
+	}
+	$('.setlang a').on('click', function(e) {
+		e.preventDefault();
+		window.location.href = base_url + '?lang=' + $(this).data('lang');
+	});
+
 	var initForms = function (jsonData) {
 
-		var submit_btn 	= jsonData.fields.submit;
-		var required 	= jsonData.messages.required;
-	    var email_req 	= jsonData.messages.email_required;
-	    var error_msg 	= jsonData.messages.error_msg;
-	    var error_btn 	= jsonData.messages.error_btn;
+		// get json lang according to locale set in head
+		if (locale == "en") {
+			var submit_btn 	= jsonData.en.fields.submit;
+			var required 	= jsonData.en.messages.required;
+		    var email_req 	= jsonData.en.messages.email_required;
+		    var error_msg 	= jsonData.en.messages.error_msg;
+		    var error_btn 	= jsonData.en.messages.error_btn;
+	    } else {
+	    	var submit_btn 	= jsonData.es.fields.submit;
+			var required 	= jsonData.es.messages.required;
+		    var email_req 	= jsonData.es.messages.email_required;
+		    var error_msg 	= jsonData.es.messages.error_msg;
+		    var error_btn 	= jsonData.es.messages.error_btn;
+	    }
 
 		// submit newsletter
 		$("#newsletter-submit").validate({

@@ -1,22 +1,40 @@
 {
-    "criteria_list": [
-        {
-            "class": "earthcare",
-            "image" : "assets/img/icon-earthcare.svg",
+"criteria_list": [
+    {
+        "class": "earthcare",
+        "image" : "assets/img/icon-earthcare.svg",
+        "en": {
             "title" : "1. Earth Care",
             "text" : "Emphasis on whole-system sustainability <span class='feature-highlight'>and/or</span> holistic health &amp; well-being"
         },
-        {
-            "class": "education",
-            "image" : "assets/img/icon-education.svg",
+        "es": {
+            "title" : "1. Cuidado de la Tierra",
+            "text" : "Enfatizando un sistema completo de sostenibilidad <span class='feature-highlight'>y/o</span> salud holística y bienestar"
+        }
+    },
+    {
+        "class": "education",
+        "image" : "assets/img/icon-education.svg",
+        "en": {
             "title" : "2. Education",
             "text" : "Provides retreats, workshops, courses <span class='feature-highlight'>and/or</span> work-exchange or volunteering"
         },
-        {
-            "class": "accommodation",
-            "image" : "assets/img/icon-accommodation.svg",
+        "es": {
+            "title" : "2. Educación",
+            "text" : "Proveyendo retiros, talleres, cursos <span class='feature-highlight'>y/o</span> intercambios de trabajo o programas de voluntariado."
+        }
+    },
+    {
+        "class": "accommodation",
+        "image" : "assets/img/icon-accommodation.svg",
+        "en": {
             "title" : "3. Accommodation",
             "text" : "Has the capacity to host individuals on-site for short or long-term stays"
+        },
+        "es": {
+            "title" : "3. Acomodación y alojamiento",
+            "text" : "Tiene la capacidad de acomodar personas para estadías de corto o largo plazo."
         }
-    ]
+    }
+]
 }

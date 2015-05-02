@@ -87,6 +87,7 @@ h2 {
     padding: 14px 24px;
     text-transform: uppercase;
     font-weight: 600;
+    letter-spacing: 0.02em;
     i {margin-left: 5px;}
     &:hover {
       color: white;
@@ -241,7 +242,7 @@ h2 {
 }
 
 // home page navi font media query
-.home .navbar a, .home .navbar a:hover, .home .navbar a:focus {
+.home .navbar a, .home .navbar a:hover, .home .navbar a:focus, .home .navbar li.active a {
   @include mq($from: desktop) {
     color: white;
   }
@@ -258,7 +259,6 @@ h2 {
   }
   width: 100vw;
   margin: 30px 0 0 0;
-
   &-toggle {
     margin-top: 5px;
     .icon-bar {
@@ -272,7 +272,12 @@ h2 {
     }
   }
   &-brand img {
-    width: 220px;
+    width: 200px;
+    margin-top: 4px;
+    @include mq($from: mobileLandscape) {
+      width: 220px;
+      margin: 0;
+    }
     @include mq($from: tabletLandscape) {
       width: 260px;
     }
@@ -310,7 +315,7 @@ h2 {
       padding: 0;
       margin-top: 10px;
       @include mq($from: tabletLandscape) {
-        margin: 0 0 0 20px;
+        margin: 0 0 0 10px;
       }
     }
     &.active a, &>a:focus, &>a:hover {
@@ -343,6 +348,36 @@ h2 {
     }
   }
 }
+.lang-switch {
+  margin: 10px 40px;
+  @include mq($from: mobileLandscape) {
+    margin: 10px 0 0 8px;
+  }
+  @include mq($from: tabletLandscape) {
+    float: right;
+    margin: 4px 0 0 20px;
+  }
+  ul {
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline;
+      a {
+        padding: 0 !important;
+        margin: 0 0 0 2px !important;}
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+      }
+    }
+}
+.home .lang-switch ul {
+  @include mq($from: desktop) {
+    color: white !important;
+  }
+}
+
 
 
 /* -----------------------------------------------

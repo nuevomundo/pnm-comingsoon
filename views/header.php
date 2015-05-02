@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation">
     <div class="container">
 
-      <a class="navbar-brand navbar-left" href="index.php" >
+      <a class="navbar-brand navbar-left" href="index.php<?php if( isset($_GET['lang']) && $lang ) : echo "?lang=". $lang; endif; ?>" >
         <img src="assets/img/pnm-logo-wide.svg">
       </a>
 

@@ -1,35 +1,72 @@
 {
-    "fields": {
-        "firstname": "First name",
-        "lastname": "Last name",
-        "email": "Email",
-        "interest_selected": "I'm interested in...",
-        "interest": [
-            {
-                "option" : "Finding an experience"
-            },
-            {
-                "option" : "Adding a center"
-            },
-            {
-                "option" : "Using the booking tool"
-            },
-            {
-                "option" : "Collaborate"
-            },
-            {
-                "option" : "Other"
-            }
-        ],
-        "message": "Your message",
-        "submit": "Submit"
+    "en": {
+        "fields": {
+            "firstname": "First name",
+            "lastname": "Last name",
+            "email": "Email",
+            "interest_selected": "I'm interested in...",
+            "interest": [
+                {
+                    "option" : "Finding an experience"
+                },
+                {
+                    "option" : "Adding a center"
+                },
+                {
+                    "option" : "Using the booking tool"
+                },
+                {
+                    "option" : "Collaborate"
+                },
+                {
+                    "option" : "Other"
+                }
+            ],
+            "message": "Your message",
+            "submit": "Submit"
+        },
+        "messages": {
+            "required": "This field is required.",
+            "email_required": "Please enter a valid email address.",
+            "send_success": "Thanks! We'll get back to you very soon.",
+            "subscribe_success": "Thanks for subscribing, please check your inbox to confirm!",
+            "error_msg": "Error, please try again.",
+            "error_btn": "Submit again"
+        }
     },
-    "messages": {
-        "required": "This field is required.",
-        "email_required": "Please enter a valid email address.",
-        "send_success": "Thanks! We'll get back to you very soon.",
-        "subscribe_success": "Thanks for subscribing, please check your inbox to confirm!",
-        "error_msg": "Error, please try again.",
-        "error_btn": "Submit again"
+    "es": {
+        "fields": {
+            "firstname": "Nombre",
+            "lastname": "Apellido",
+            "email": "Email",
+            "interest_selected": "Me interesan...",
+            "interest": [
+                {
+                    "option" : "Encontrar una experiencia"
+                },
+                {
+                    "option" : "Añadir un Centro"
+                },
+                {
+                    "option" : "La herramienta reservaciones"
+                },
+                {
+                    "option" : "Colabora"
+                },
+                {
+                    "option" : "Otros"
+                }
+            ],
+            "message": "Tu mensaje",
+            "submit": "Enviar"
+        },
+        "messages": {
+            "required": "Requerimos.",
+            "email_required": "Por favor ingresa una dirección de correo válida.",
+            "send_success": "Gracias, pronto te contactaremos de vuelta.",
+            "subscribe_success": "Gracias por tu suscripción, por favor revisa tu bandeja de entrada de correo para confirmar!",
+            "error_msg": "Error, por favor intenta de nuevo.",
+            "error_btn": "Enviar de nuevo"
+        }
     }
 }

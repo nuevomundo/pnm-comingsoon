@@ -3,8 +3,14 @@
     [{
         "image": "assets/img/team-david.jpg",
         "name": "David Casey",
-        "role": "Co-Founder and CEO",
-        "bio": "David has spent much of the past five years in Central America organizing cultural events, retreats, and ecovillage design courses. He also spent considerable time managing volunteers at a farm and worked with an indigenous artisan cooperative in Guatemala. His experience and BA in Political Economy of Industrial Societies and Global Poverty &amp; Practice from UC Berkeley are a pivotal foundation to the inspiration of PNM.",
+        "en": {
+            "role": "Co-Founder and CEO",
+            "bio": "David has spent much of the past five years in Central America organizing cultural events, retreats, and ecovillage design courses. He also spent considerable time managing volunteers at a farm and worked with an indigenous artisan cooperative in Guatemala. His experience and BA in Political Economy of Industrial Societies and Global Poverty &amp; Practice from UC Berkeley are a pivotal foundation to the inspiration of PNM."
+        },
+        "es": {
+            "role": "Co-Fundador y CEO",
+            "bio": "David ha pasado gran parte de los últimos cinco años en América Central organizando eventos culturales, retiros y cursos de diseño de ecoaldea. Él también pasó bastante tiempo en la gestión de voluntarios en una granja, y trabajó con una cooperativa artesanal indígena en Guatemala. Su experiencia y su BA en Economía Política de las sociedades industriales y la pobreza mundial de la Universidad de Berkeley son una base fundamental para la inspiración del PNM."
+        },
         "social": {
             "twitter": "",
             "linkedin": "http://www.linkedin.com/pub/david-casey/b/525/221",
@@ -15,8 +21,14 @@
     {
         "image": "assets/img/team-shayna.jpg",
         "name": "Shayna Gladstone",
-        "role": "Co-Founder and COO",
-        "bio": "Shayna is an international eco-network weaver, entrepreneur, consultant, event producer and life-long earth-steward and has spent the past 2 years in Latin America connecting with local community and land regeneration projects. Shayna’s wide passion for building relationships, her eye for branding and her inspiring voice on social media are essential to the operations and marketing of PNM.",
+        "en": {
+            "role": "Co-Founder and COO",
+            "bio": "Shayna is an international eco-network weaver, entrepreneur, consultant, event producer and life-long earth-steward and has spent the past 2 years in Latin America connecting with local community and land regeneration projects. Shayna’s wide passion for building relationships, her eye for branding and her inspiring voice on social media are essential to the operations and marketing of PNM."
+        },
+        "es": {
+            "role": "Co-Fundador y Director de Operaciones",
+            "bio": "Shayna es un tejedor de redes, empresaria, consultora, productora de eventos y guardián de la tierra.  Ella ha pasado los últimos 2 años en América Latina conectando con proyectos comunitarios y de regeneración de tierras locales. Su gran pasión es la construcción de relaciones. Su ojo para marcas y su voz inspiradora en los medios sociales son fundamentales para las operaciones y marketing de PNM."
+        },
         "social": {
             "twitter": "https://twitter.com/shaynagladstone",
             "linkedin": "http://pe.linkedin.com/pub/shayna-gladstone/58/287/458",
@@ -27,8 +39,14 @@
     {
         "image": "assets/img/team-erika.jpg",
         "name": "Erika Logie",
-        "role": "Co-Founder and CCO",
-        "bio": "Erika has spent the last decade working in user experience and user interface design, and has worked with Disney, Fox, ABC and NBC. She played a pivotal role in running a newly founded eco-village in Nicaragua through marketing, event organizing, administrative management and conflict mediation. When she's not making things beautiful, Erika can be found dancing, hula hooping and snuggling with her cats.",
+        "en": {
+            "role": "Co-Founder and CCO",
+            "bio": "Erika has spent the last decade working in user experience and user interface design, and has worked with Disney, Fox, ABC and NBC. She played a pivotal role in running a newly founded eco-village in Nicaragua through marketing, event organizing, administrative management and conflict mediation. When she's not making things beautiful, Erika can be found dancing, hula hooping and snuggling with her cats."
+        },
+        "es": {
+            "role": "Co-fundadora y CCO",
+            "bio": "Erika ha pasado la última década trabajando en la experiencia de usuario y el diseño de interfaz del usuario, y ha trabajado con Disney, Fox, ABC y NBC. Ella jugó un parte fundamental en el funcionamiento de una eco-aldea recién fundada en Nicaragua a través del marketing, organización de eventos, gestión administrativa y la mediación de conflictos. Cuando no está haciendo diseños bellos, Erika se puede encontrar bailando, haciendo hula hula y abrazando a sus gatos."
+        },
         "social": {
             "twitter": "https://twitter.com/erikalogie",
             "linkedin": "http://www.linkedin.com/pub/erika-logie/7/564/3a1",
@@ -39,8 +57,14 @@
     {
         "image": "assets/img/team-jennifer.jpg",
         "name": "Jennifer Schmidt",
-        "role": "Co-Founder and CFO",
-        "bio": "Jennifer has over 14 years of experience with business development and has a background in project management, finance, tax, and sales consulting and has started 8 successful businesses. Apart from business and finances, she fuses her passions for artistic expression and the earth by consulting for sustainable and community-oriented projects and creating incredible visionary paintings.",
+        "en": {
+            "role": "Co-Founder and CFO",
+            "bio": "Jennifer has over 14 years of experience with business development and has a background in project management, finance, tax, and sales consulting and has started 8 successful businesses. Apart from business and finances, she fuses her passions for artistic expression and the earth by consulting for sustainable and community-oriented projects and creating incredible visionary paintings."
+        },
+        "es": {
+            "role": "Co-Fundadora y Directora Financiera",
+            "bio": "Jennifer tiene más de 14 años de experiencia en desarrollo de negocios y tiene experiencia en la gestión de proyectos, finanzas, impuestos y consultoría de ventas y ha comenzado 8 empresas. A parte de los negocios y las finanzas, ella fusiona su pasión para la expresión artística y la tierra con una consultoría para proyectos sostenibles y comunitarias. En su tiempo libre, ella se enfoca en la creación de pinturas visionarias increíbles."
+        },
         "social": {
             "twitter": "",
             "linkedin": "http://www.linkedin.com/pub/jennifer-schmidt/73/b41/a",
@@ -51,8 +75,14 @@
     {
         "image": "assets/img/team-eric.jpg",
         "name": "Eric Garcia",
-        "role": "CTO",
-        "bio": "Eric is a Data Scientist and holds a PhD in Electrical Engineering from the University of Washington. He has experience building web applications for two data-driven technology startups and is passionate about creating tools that enable communities to organize information and resources to build sustainable local infrastructures.",
+        "en": {
+            "role": "CTO",
+            "bio": "Eric is a Data Scientist and holds a PhD in Electrical Engineering from the University of Washington. He has experience building web applications for two data-driven technology startups and is passionate about creating tools that enable communities to organize information and resources to build sustainable local infrastructures."
+        },
+        "es": {
+            "role": "CTO",
+            "bio": "Eric es un científico de datos y tiene un doctorado en Ingeniería Eléctrica de la Universidad de Washington. Él tiene experiencia en la construcción de aplicaciones web para dos nuevas empresas de tecnología basadas en datos. El esta apasionado de crear herramientas que permitan a las comunidades organizar información y recursos para construir infraestructuras locales sostenibles."
+        },
         "social": {
             "twitter": "",
             "linkedin": "http://www.linkedin.com/in/corndog",
@@ -63,8 +93,14 @@
     {
         "image": "assets/img/team-taylor.jpg",
         "name": "Taylor Proffitt",
-        "role": "Network Guide",
-        "bio": "Taylor Proffitt is a travel journalist, alliance builder, organic gardener, and community activist. He works from the back end of multiple networks and organizations to enable resource sharing. Each day Taylor strives to make small changes toward a more socially and ecologically just planet while continually discovering new centers who align with these values.",
+        "en": {
+            "role": "Network Guide",
+            "bio": "Taylor Proffitt is a travel journalist, alliance builder, organic gardener, and community activist. He works from the back end of multiple networks and organizations to enable resource sharing. Each day Taylor strives to make small changes toward a more socially and ecologically just planet while continually discovering new centers who align with these values."
+        },
+        "es": {
+            "role": "Guía de red",
+            "bio": "Taylor Proffitt es un periodista de viajes, constructor de alianzas, jardinero orgánico, y activista comunitaria. El trabaja entre y detrás de varias redes y organizaciones para permitir el uso compartido de recursos. Cada día Taylor se esfuerza por hacer pequeños cambios hacia un planeta más social y ecológicamente justo, descubriendo continuamente nuevos centros que se alinean con estos valores."
+        },
         "social": {
             "twitter": "",
             "linkedin": "http://www.linkedin.com/in/taylorproffitt",

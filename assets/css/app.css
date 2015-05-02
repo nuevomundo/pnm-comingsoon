@@ -411,6 +411,7 @@ h2 {
   padding: 14px 24px;
   text-transform: uppercase;
   font-weight: 600;
+  letter-spacing: 0.02em;
   position: relative;
   overflow: hidden;
   opacity: .99;
@@ -584,7 +585,7 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
     padding: 0 7%; } }
 
 @media (min-width: 62em) {
-  .home .navbar a, .home .navbar a:hover, .home .navbar a:focus {
+  .home .navbar a, .home .navbar a:hover, .home .navbar a:focus, .home .navbar li.active a {
     color: white; } }
 
 .navbar {
@@ -608,7 +609,12 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
       .navbar-brand {
         padding: 0; } }
   .navbar-brand img {
-    width: 220px; }
+    width: 200px;
+    margin-top: 4px; }
+    @media (min-width: 30em) {
+      .navbar-brand img {
+        width: 220px;
+        margin: 0; } }
     @media (min-width: 48em) {
       .navbar-brand img {
         width: 260px; } }
@@ -637,7 +643,7 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
     margin-top: 10px; }
     @media (min-width: 48em) {
       .navbar li:last-child a {
-        margin: 0 0 0 20px; } }
+        margin: 0 0 0 10px; } }
   .navbar li.active a, .navbar li > a:focus, .navbar li > a:hover {
     background: transparent;
     color: #32bfc1;
@@ -661,6 +667,31 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
         margin-top: 0; } }
     .navbar li.list-btn a:hover, .navbar li.list-btn a:focus {
       border: none; }
+
+.lang-switch {
+  margin: 10px 40px; }
+  @media (min-width: 30em) {
+    .lang-switch {
+      margin: 10px 0 0 8px; } }
+  @media (min-width: 48em) {
+    .lang-switch {
+      float: right;
+      margin: 4px 0 0 20px; } }
+  .lang-switch ul {
+    padding: 0; }
+    .lang-switch ul li {
+      list-style: none;
+      display: inline;
+      text-decoration: none; }
+      .lang-switch ul li a {
+        padding: 0 !important;
+        margin: 0 0 0 2px !important; }
+    .lang-switch ul:focus {
+      text-decoration: none; }
+
+@media (min-width: 62em) {
+  .home .lang-switch ul {
+    color: white !important; } }
 
 /* -----------------------------------------------
   Grid
