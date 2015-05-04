@@ -2,7 +2,7 @@
 //error_reporting(0);
 
 // wordpress path
-$blog_path = '../pnm-blog/wp-blog-header.php';
+$blog_path = 'blog/wp-blog-header.php';
 
 // get browser language base with substr
 $browser_lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
