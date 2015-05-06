@@ -17,7 +17,7 @@ h1, h2, .col-caption p, .feature p, .team p {
   height: 340px; }
   @media (min-width: 48em) {
     .home .grid.section-welcome .col-caption {
-      height: 500px; } }
+      height: 450px; } }
 .home .grid.section-welcome .col-caption div {
   margin: 0 20px; }
   @media (min-width: 37.5em) {
@@ -356,6 +356,12 @@ h1, h2, .col-caption p, .feature p, .team p {
 /* -----------------------------------------------
   Base
   ------------------------------------------------ */
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
 html {
   box-sizing: border-box; }
 
@@ -579,14 +585,18 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
 /* -----------------------------------------------
   Navigation
   ------------------------------------------------ */
-@media (min-width: 30em) and (max-width: 81.24em) {
-  .navbar .container {
-    width: 100%;
-    padding: 0 7%; } }
-
 @media (min-width: 62em) {
   .home .navbar a, .home .navbar a:hover, .home .navbar a:focus, .home .navbar li.active a {
     color: white; } }
+
+@media (min-width: 48em) {
+  .home .main.row,
+  .about .main.row {
+    margin-top: -80px;
+    display: inline-block; } }
+
+.container-fluid .navbar {
+  padding: 0 5%; }
 
 .navbar {
   font-family: "Lato", "Helvetica Neue", Helvetica, sans-serif;
@@ -594,20 +604,13 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
   font-weight: 400;
   position: relative;
   z-index: 1000;
-  width: 100vw;
-  margin: 30px 0 0 0; }
-  @media (min-width: 48em) {
-    .navbar {
-      position: absolute; } }
+  margin: 25px 0 0 0; }
   .navbar-toggle {
-    margin-top: 5px; }
+    margin: 5px 0 0 0; }
     .navbar-toggle .icon-bar {
       background-color: #1a1a1a; }
   .navbar-brand {
-    padding: 0 0 0 20px; }
-    @media (min-width: 30em) {
-      .navbar-brand {
-        padding: 0; } }
+    padding: 0; }
   .navbar-brand img {
     width: 200px;
     margin-top: 4px; }
@@ -623,10 +626,7 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
   .navbar-collapse {
     padding: 0; }
     .navbar-collapse .navbar-nav {
-      margin: 5px 40px; }
-      @media (min-width: 30em) {
-        .navbar-collapse .navbar-nav {
-          margin: 5px 10px; } }
+      margin: 5px 0; }
   .navbar-nav button {
     color: white;
     font-size: 12px;
@@ -669,10 +669,7 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
       border: none; }
 
 .lang-switch {
-  margin: 10px 40px; }
-  @media (min-width: 30em) {
-    .lang-switch {
-      margin: 10px 0 0 8px; } }
+  margin: 10px 0; }
   @media (min-width: 48em) {
     .lang-switch {
       float: right;
@@ -696,9 +693,6 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
 /* -----------------------------------------------
   Grid
   ------------------------------------------------ */
-.container-fluid {
-  min-height: 500px; }
-
 .container-fluid > .row {
   margin: 0; }
 
@@ -799,19 +793,25 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
 /* -----------------------------------------------
   Content
   ------------------------------------------------ */
-body.generic {
+body.page {
   background: transparent url("../img/world-bg-opaque.jpg") no-repeat top center; }
 
-.generic .grid {
+.page .grid {
   margin: 0;
-  min-height: 500px;
-  padding: 50px 20px 0 20px; }
+  padding: 50px 20px; }
   @media (min-width: 37.5em) {
-    .generic .grid {
-      min-height: 600px;
-      padding: 200px 0 0 0; } }
+    .page .grid {
+      padding: 100px 0; } }
 
-.error404 h1, .error500 h1 {
+.wrap {
+  min-height: 100%;
+  margin-bottom: -80px; }
+
+.wrap:after {
+  content: "";
+  display: block; }
+
+.errorpage h1 {
   font-size: 100px;
   color: #1b7876;
   font-weight: 700; }
@@ -840,6 +840,9 @@ ul.logo-list {
 /* -----------------------------------------------
   Footer
   ------------------------------------------------ */
+.site-footer, .wrap:after {
+  height: 80px; }
+
 footer.content-info {
   font-size: 14px;
   padding: 20px 0;

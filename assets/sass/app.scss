@@ -32,10 +32,9 @@ $btn-transition: all 0.35s cubic-bezier(0.310, -0.105, 0.430, 1.590);
   Base
   ------------------------------------------------ */
 
-html {
-  box-sizing: border-box;
-}
-
+* {margin: 0;}
+html, body {height: 100%;}
+html {box-sizing: border-box;}
 body {
   font-family: $copy-font;
   font-size: $copy-ftsize;
@@ -233,43 +232,41 @@ h2 {
   Navigation
   ------------------------------------------------ */
 
-.navbar .container {
-  // snap to grid below mobile landscape and on wide displays
-  @include mq($from: mobileLandscape, $until: wide) {
-    width: 100%;
-    padding: 0 7%;
-  }
-}
-
-// home page navi font media query
+// home page navi image overlay
 .home .navbar a, .home .navbar a:hover, .home .navbar a:focus, .home .navbar li.active a {
   @include mq($from: desktop) {
     color: white;
   }
 }
 
+// position navbar above content on body class
+.home .main.row, 
+.about .main.row {
+  @include mq($from: tabletLandscape) {
+    margin-top: -80px;
+    display: inline-block;
+  }
+}
+
+// full width navi padding
+.container-fluid .navbar {
+  padding: 0 5%;
+}
 .navbar {
   font-family: $head-font;
   font-size: $navi-ftsize;
   font-weight: 400;
   position: relative;
   z-index: 1000;
-  @include mq($from: tabletLandscape) {
-    position: absolute;
-  }
-  width: 100vw;
-  margin: 30px 0 0 0;
+  margin: 25px 0 0 0;
   &-toggle {
-    margin-top: 5px;
+    margin: 5px 0 0 0;
     .icon-bar {
       background-color: color('black');
     }
   }
   &-brand {
-    padding: 0 0 0 20px;
-    @include mq($from: mobileLandscape) {
-      padding: 0;
-    }
+    padding: 0;
   }
   &-brand img {
     width: 200px;
@@ -288,10 +285,7 @@ h2 {
   &-collapse {
     padding: 0;
     .navbar-nav {
-      margin: 5px 40px;
-      @include mq($from: mobileLandscape) {
-        margin: 5px 10px;
-      }
+      margin: 5px 0;
     }
   }
   &-nav {
@@ -349,10 +343,7 @@ h2 {
   }
 }
 .lang-switch {
-  margin: 10px 40px;
-  @include mq($from: mobileLandscape) {
-    margin: 10px 0 0 8px;
-  }
+  margin: 10px 0;
   @include mq($from: tabletLandscape) {
     float: right;
     margin: 4px 0 0 20px;
@@ -384,7 +375,6 @@ h2 {
   Grid
   ------------------------------------------------ */
 
-.container-fluid {min-height: 500px;}
 .container-fluid > .row {
   margin: 0;
 }
@@ -503,19 +493,26 @@ h2 {
 /* -----------------------------------------------
   Content
   ------------------------------------------------ */
-body.generic {
+body.page {
     background: transparent url("../img/world-bg-opaque.jpg") no-repeat top center;
 }
-.generic .grid {
+.page .grid {
   margin: 0;
-  min-height: 500px;
-  padding: 50px 20px 0 20px;
+  padding: 50px 20px;
   @include mq($from: tablet) {
-    min-height: 600px;
-    padding: 200px 0 0 0;
+    padding: 100px 0;
   }
 }
-.error404 h1, .error500 h1 {
+// sticky footer
+.wrap {
+  min-height: 100%; 
+  margin-bottom: -80px;
+}
+.wrap:after {
+  content: "";
+  display: block;
+}
+.errorpage h1 {
   font-size: 100px;
   color: color('teal', 'shade');
   font-weight: 700;
@@ -547,6 +544,10 @@ ul.logo-list {
   Footer
   ------------------------------------------------ */
 
+// sticky footer
+.site-footer, .wrap:after {
+  height: 80px; 
+}
 footer.content-info {
   font-size: $small-ftsize;
   padding: 20px 0;

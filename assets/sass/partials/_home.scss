@@ -1,6 +1,6 @@
 .home .grid {
   &.section-welcome {
-    @include col-caption(340px, 500px, left);
+    @include col-caption(340px, 450px, left);
     @include col-image(650px,right,top,"../img/pnm-landing-page-v02-00.jpg");
     .col-caption div {
       text-align: left;
