@@ -144,8 +144,16 @@
             	<div>
               		<h1><?php echo $pnm[$lang]['about']['partner_title']; ?></h1>
               		 <ul class="logo-list">
-		                <li><img src="assets/img/logo-tribal-convergence-network.jpg" alt="Tribal Convergence Network Logo"></li>
-		                <li><img src="assets/img/logo-seeds-game.jpg" alt="Seeds Game Logo"></li>
+		                <li>
+                      <a href="http://tribalconvergence.com/" target="_blank" title="Tribal Convergence Network">
+                        <img src="assets/img/logo-tribal-convergence-network.jpg" alt="Tribal Convergence Network Logo">
+                      </a>
+                    </li>
+		                <li>
+                      <a href="http://seedsthegame.com/" target="_blank" title="Seeds - The Game">
+                        <img src="assets/img/logo-seeds-game.jpg" alt="Seeds Game Logo">
+                      </a>
+                    </li>
 		              </ul>
             	</div>
             </div>
