@@ -14,8 +14,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="<?php echo $pnm['config']['title']; ?><?php if (isset($page_id)) : ?> - <?php echo $pnm[$lang][$page_id][$page_id . '_title']; endif; ?>" />
     <meta property="og:description" content="<?php echo $pnm['config']['description']; ?>" />
-    <meta property="og:url" content="http://projectnuevomundo.com<?php echo $page_url; ?>" />
-    <meta property="og:image" content="http://projectnuevomundo.com/assets/img/social-thumb.jpg" />
+    <meta property="og:url" content="http://numundo.org<?php echo $page_url; ?>" />
+    <meta property="og:image" content="http://numundo.org/assets/img/social-thumb.jpg" />
     <meta property="og:site_name" content="<?php echo $pnm['config']['title']; ?>" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Lato:300,400' rel='stylesheet' type='text/css'>

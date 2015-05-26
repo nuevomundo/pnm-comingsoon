@@ -606,21 +606,20 @@ form.form-inline .submit-success, form.form-horizontal .submit-success, form.for
   z-index: 1000;
   margin: 25px 0 0 0; }
   .navbar-toggle {
-    margin: 5px 0 0 0; }
+    margin: 8px 0 0 0; }
     .navbar-toggle .icon-bar {
       background-color: #1a1a1a; }
   .navbar-brand {
     padding: 0; }
   .navbar-brand img {
-    width: 200px;
+    max-height: 40px;
     margin-top: 4px; }
     @media (min-width: 30em) {
       .navbar-brand img {
-        width: 220px;
         margin: 0; } }
     @media (min-width: 48em) {
       .navbar-brand img {
-        width: 260px; } }
+        max-height: 50px; } }
   .navbar-right {
     margin-top: 10px; }
   .navbar-collapse {

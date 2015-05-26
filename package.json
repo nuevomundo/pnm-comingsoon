@@ -1,7 +1,7 @@
 {
-  "name": "PNM",
+  "name": "NuMundo",
   "version": "0.0.1",
-  "description": "Project Nuevo Mundo Landing Page",
+  "description": "NuMundo Landing Page",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

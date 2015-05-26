@@ -178,7 +178,7 @@
       <div class="row">
 
         <div class="col-md-12">
-          <img src="../assets/img/pnm-logo-wide.svg" style="padding: 20px; max-width: 360px;" alt="Project Nuevo Mundo Logo" />
+          <img src="../assets/img/pnm-logo-wide.svg" style="padding: 20px; max-width: 360px;" alt="NuMundo Logo" />
         </div>
 
         <div class="col-md-12">
@@ -203,11 +203,11 @@
 
                   <div class="form-group">
                     <label for="title">Page title</label>
-                    <input class="form-control" type="text" name="title" placeholder="Welcome to Project Nuevo Mundo" value="<?php echo $pnm['config']['title']; ?>" required/>
+                    <input class="form-control" type="text" name="title" placeholder="Welcome to NuMundo" value="<?php echo $pnm['config']['title']; ?>" required/>
                   </div>
                   <div class="form-group">
                     <label for="keywords">Keywords</label>
-                    <input class="form-control" type="text" name="keywords" placeholder="Ecological, Project Nuevo Mundo, Impact Centres" value ="<?php echo $pnm['config']['keywords']; ?>" required/>
+                    <input class="form-control" type="text" name="keywords" placeholder="Ecological, NuMundo, Impact Centres" value ="<?php echo $pnm['config']['keywords']; ?>" required/>
                   </div>
                   <div class="form-group">
                     <label for="description">Description</label>

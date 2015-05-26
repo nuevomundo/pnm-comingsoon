@@ -1,7 +1,7 @@
-# Project Nuevo Mundo
+# NuMundo
 =============
 
-Temporary PNM landing page with basic JSON backend
+Temporary NuMundo landing page with basic JSON backend
 
 Installation
 ------------

@@ -1,15 +1,15 @@
 {
     "config": {
-        "title": "Project Nuevo Mundo",
-        "keywords": "Project Nuevo Mundo, Impact Centres, New World",
+        "title": "NuMundo",
+        "keywords": "NuMundo, Project Nuevo Mundo, Impact Centres, New World",
         "description": "Network of ecovillages, consciousness centers, travelers and volunteers that exists to advance the development of a new world.",
         "analytics": "UA-62100318-1",
-        "footer_comment": "Copyright \u00a92015 Project Nuevo Mundo"
+        "footer_comment": "Copyright \u00a92015 NuMundo"
     },
     "en": {
         "home": {
             "home_title": "Welcome",
-            "cta1": "Discover<br \/> transformational travel<br \/> experiences in Latin<br\/> America.",
+            "cta1": "Discover<br \/> transformational<br \/> travel experiences.",
             "cta1_content": "We're building a database of ecovillages, intentional communities, permaculture farms, social projects and retreat centers.",
             "cta1_btn": "Learn more",
             "cta2": "We help people make an impact.",
@@ -28,7 +28,7 @@
             "feature_text_2": "<p>Our team is currently participating in <a href='http:\/\/www.startupchile.org\/blog\/ladies-and-gentleman-these-are-the-100-startups-chosen-to-be-part-of-generation-12\/' target='_blank'>Startup Chile 2015<\/a> and focusing on creating organizational and booking tools specifically designed for centers like yours.<\/p><p>Contact us if you would like to offer your input.<\/p>",
             "feature_btn_2": "Contact us",
             "subscribe_title": "Become a part of the movement.",
-            "subscribe_intro": "Get involved by signing up for our newsletter or sharing Project Nuevo Mundo on Facebook and Twitter.",
+            "subscribe_intro": "Get involved by signing up for our newsletter or sharing NuMundo on Facebook and Twitter.",
             "blog_title": "Learn more about transformational travel on our blog.",
             "press_title": "Press & Participation."
         },
@@ -37,7 +37,7 @@
             "intro_title": "We vision a network of interlinked centers.",
             "intro_text": "<p>We connect people to meaningful experiences to facilitate personal transformation and accelerate the development of <a href='#impactcenter' title='Link to center listing'>impact centers<\/a>.<\/p>",
             "story_title": "Our Story",
-            "story_text": "Project Nuevo Mundo began in 2013 when 4 passionate nomads bound together to create a platform that would be a transparent and trusted resource for travelers all over the world to find more enriching ways to travel, work, live and learn.",
+            "story_text": "NuMundo began in 2013 when 4 passionate nomads bound together to create a platform that would be a transparent and trusted resource for travelers all over the world to find more enriching ways to travel, work, live and learn.",
             "team_title": "Our Team.",
             "team_text": "Our staff has experience living and working at impact centers in North, Central and South America, and shares a love of Latin culture, pupusas, and cacao-fueled dance parties.",
             "impact_title": "What is an impact center?",
@@ -70,7 +70,7 @@
             "feature_text_2": "<p>Nuestro equipo esta participando actualmente en <a href='http:\/\/www.startupchile.org\/blog\/ladies-and-gentleman-these-are-the-100-startups-chosen-to-be-part-of-generation-12\/' target='_blank'>Startup Chile 2015<\/a> enfocado en crear herramientas organizacionales y de reservaciones espec\u00edficamente dise\u00f1adas para centros como el tuyo.<\/p><p>Contactanos si te gustar\u00eda ofrecernos tus comentarios e ideas.<\/p>",
             "feature_btn_2": "Contactanos",
             "subscribe_title": "Se parte del movimiento.",
-            "subscribe_intro": "Invol\u00facrate, suscr\u00edbete a nuestras noticias o compartiendo Project Nuevo Mundo en Facebook y Twitter.",
+            "subscribe_intro": "Invol\u00facrate, suscr\u00edbete a nuestras noticias o compartiendo NuMundo en Facebook y Twitter.",
             "blog_title": "Aprende m\u00e1s sobre viajes transformacionales en nuestro blog.",
             "press_title": "Noticias y Participaci\u00f3n."
         },
