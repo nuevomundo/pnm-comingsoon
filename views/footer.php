@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="social">
 			<ul>
-				<li><a target="_blank" href="http://facebook.com/ProjectNuevoMundo" title="Link to Facebook"><img src="assets/img/icon-facebook.svg" alt=""></a></li>
+				<li><a target="_blank" href="http://facebook.com/numundonow" title="Link to Facebook"><img src="assets/img/icon-facebook.svg" alt=""></a></li>
 				<li><a target="_blank" href="http://twitter.com/nu_mundo" title="Link to Twitter"><img src="assets/img/icon-twitter.svg" alt=""></a></li>
 				<li><a target="_blank" href="http://instagram.com/nu_mundo/" title="Link to Instagram"><img src="assets/img/icon-instagram.svg" alt=""></a></li>
 				<li><a target="_blank" href="http://vimeo.com/numundo" title="Link to Vimeo"><img src="assets/img/icon-vimeo.svg" alt=""></a></li>
