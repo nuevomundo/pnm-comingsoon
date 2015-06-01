@@ -78,7 +78,7 @@
                         <?php echo $pnm[$lang]['home']['feature_text_1']; ?>
                     </div>
                     <div class="feature-btn">
-                      <a href="about.php<?php if( isset($_GET['lang']) && $lang ) : echo "?lang=". $lang; endif; ?>#impactcenter" title="Contact Us"><button class="btn btn-olive"><?php echo $pnm[$lang]['home']['feature_btn_1']; ?> <i class="fa fa-angle-double-right"></i></button></a>
+                      <a target="_blank" href="https://pnm.typeform.com/to/UHaXXV" title="Contact Us"><button class="btn btn-olive"><?php echo $pnm[$lang]['home']['feature_btn_1']; ?> <i class="fa fa-angle-double-right"></i></button></a>
                     </div>
                 </div>
 
